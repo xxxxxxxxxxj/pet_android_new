@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.haotang.pet.view.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="172dip"
+                app:hl_cornerRadius="10dip"
+                android:layout_marginTop="5dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowColor="@color/default_shadow_color"
+                app:hl_shadowLimit="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/showtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:text="0/100" />
+
+                    <EditText
+                        android:id="@+id/et_note_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="135dip"
+                        android:layout_above="@id/showtext"
+                        android:layout_marginBottom="10dip"
+                        android:background="@color/transparent"
+                        android:gravity="top"
+                        android:hint="填写对宠物需要注意的信息"
+                        android:lines="8"
+                        android:maxLength="100"
+                        android:padding="10dip"
+                        android:textColor="@color/a666666"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </com.haotang.pet.view.ShadowLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_note_submite"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="20dip"
+                android:layout_marginRight="@dimen/margin_right"
+                android:background="@drawable/bg_button_orange"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

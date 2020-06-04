@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChooseCityActivity">
+
+    <ImageView
+        android:id="@+id/iv_choosecity_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/btn_back_black_servicenew" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择城市"
+        android:textColor="#ff333333"
+        android:textSize="24sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已开通门店服务城市，更多城市正在开展中，敬请期待"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="15dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
+        android:id="@+id/rv_choosecity_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        >
+            <View
+                android:layout_width="76dp"
+                android:layout_height="0.5dp"
+                android:background="#9FA7B9"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_choosecity_tip"
+                />
+            <TextView
+                android:id="@+id/tv_choosecity_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多城市正在开展中，敬请期待"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:textColor="#ff9fa7b9"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                />
+        <View
+            android:layout_width="76dp"
+            android:layout_height="0.5dp"
+            android:background="#9FA7B9"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_choosecity_tip"
+            />
+    </RelativeLayout>
+</LinearLayout>

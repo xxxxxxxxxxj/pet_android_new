@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/af8f8f8"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_item_srefundschedule_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/vw_item_srefundschedule_top"
+                    android:layout_width="2dip"
+                    android:layout_height="0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@color/aEEEEEE" />
+
+                <View
+                    android:id="@+id/vw_item_srefundschedule_bottom"
+                    android:layout_width="2dip"
+                    android:layout_height="0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:background="@color/aEEEEEE" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_item_srefundschedule_select"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_petadd_unselect" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7.5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="7.5dip"
+            android:layout_toLeftOf="@id/rl_item_srefundschedule_right"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingRight="10dip"
+            android:paddingLeft="10dip">
+
+            <TextView
+                android:id="@+id/tv_item_srefundschedule_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dip"
+                android:text="TextView"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/a999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_item_srefundschedule_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="TextView"
+                android:textColor="@color/a999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_item_srefundschedule_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/a999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-2dp"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <!--我的宠物横向滑动列表-->
+    <include layout="@layout/my_fragment_middle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyleview_my_pet"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mall_tag_back_white"
+            android:visibility="gone" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mall_tag_back_white"
+            android:clipChildren="false" />
+
+        <LinearLayout
+            android:id="@+id/layout_no_pets"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="快来添加您的第一只宝贝吧"
+                android:textColor="@color/a666666" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myfrag_xhrw"
+        android:layout_width="match_parent"
+        android:layout_height="84dip"
+        android:background="@color/f8f8ff8"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_myfrag_xhrwone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_myfrag_xhrwtwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_myfrag_xhrw1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+
+            <ImageView
+                android:id="@+id/iv_myfrag_xhrw2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginBottom="-10dp"
+        android:focusable="false"
+        android:src="@drawable/recommed_img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/af8f8f8" />
+</LinearLayout>

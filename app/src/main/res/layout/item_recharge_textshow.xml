@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_out_side">
+    <View
+        android:id="@+id/top_recharge_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/af8f8f8" />
+    <!--文案充值 成为vip -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <View
+            android:id="@+id/view_left_show"
+            android:layout_width="5dp"
+            android:layout_height="15dp"
+            android:background="@color/orange"/>
+        <LinearLayout
+            android:id="@+id/layout_is_vip_bottom_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <View
+                    android:id="@+id/view_line_left"
+                    android:layout_width="2dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/orange"/>
+                <LinearLayout
+                    android:id="@+id/layout_set_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/aF8F1E8"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/view_line_left"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:id="@+id/texview_show_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/a333333"
+                        android:text="vip" />
+
+                    <TextView
+                        android:id="@+id/textview_become_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="立即成为VIP"
+                        android:visibility="visible"
+                        android:textColor="@color/aD0021B" />
+                    <!--android:background="@drawable/bg_button_orange"-->
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/af8f8f8" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

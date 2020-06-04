@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_mycard"
+        android:layout_width="match_parent"
+        android:layout_height="240dip"
+        android:background="@drawable/icon_card_bgshade"
+        android:paddingLeft="19dip"
+        android:paddingTop="15dip"
+        android:paddingRight="19dip"
+        android:paddingBottom="23dip">
+
+        <View
+            android:id="@+id/vw_item_mycard_info"
+            android:layout_width="match_parent"
+            android:layout_height="95dip"
+            android:background="@color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_item_mycard_bky"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:text="查看无效卡>>"
+            android:textColor="@color/aBB996C"
+            android:textSize="14sp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_item_mycard_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            custom:riv_corner_radius="10dip" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_mycard_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="20dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="5dip">
+
+                <TextView
+                    android:id="@+id/tv_item_mycard_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_mycard_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/tv_item_mycard_amount"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dip"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_item_mycard_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_mycard_discounttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="top"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="2dip"
+                    android:background="@drawable/bg_cardleft_common"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="10dip"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

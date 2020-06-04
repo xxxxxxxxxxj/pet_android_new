@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_careitempet_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/aF0F5F9"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="30dip"
+    android:paddingBottom="25dip">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dip">
+
+        <com.haotang.pet.view.NiceImageView
+            android:id="@+id/iv_careitempet_pethead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_production_default"
+            android:scaleType="fitXY"
+            app:corner_radius="25dp" />
+
+        <ImageView
+            android:id="@+id/iv_careitempet_del"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_delete_img" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_careitempet_petname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:maxEms="4"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/a666666"
+        android:textSize="14sp" />
+</LinearLayout>

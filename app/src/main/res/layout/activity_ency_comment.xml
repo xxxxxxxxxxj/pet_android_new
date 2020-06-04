@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_ency_comment_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_ency_comment_comm"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_ency_comment_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="发布"
+            android:textColor="@color/a666666"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_ency_comment_submit"
+            android:background="@drawable/my_coupon_change_new"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip">
+
+            <TextView
+                android:id="@+id/tv_ency_etlenth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0/120"
+                android:textColor="@color/aBBBBBB" />
+
+            <EditText
+                android:id="@+id/et_ency_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@id/tv_ency_etlenth"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="发布评论…"
+                android:inputType="textMultiLine"
+                android:maxHeight="120dp"
+                android:maxLength="120"
+                android:minHeight="35dip"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/aBBBBBB"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_ency_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_ency_comment_comm"
+        android:layout_below="@id/rl_ency_comment_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ency_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

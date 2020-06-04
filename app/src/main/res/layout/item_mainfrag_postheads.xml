@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haotang.pet.view.ShadowLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:hl_cornerRadius="6.5dp"
+    app:hl_dx="0dp"
+    app:hl_dy="1dp"
+    app:hl_topShow="false"
+    app:hl_shadowColor="@color/bt_3"
+    app:hl_shadowLimit="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.haotang.pet.view.NiceImageView
+        android:id="@+id/nv_post_heads"
+        android:scaleType="centerCrop"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:corner_radius="6.5dp"
+        />
+</com.haotang.pet.view.ShadowLayout>

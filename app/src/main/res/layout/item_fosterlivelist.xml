@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_fosterlivelist_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:hl_cornerRadius="20dp"
+    app:hl_dx="0dp"
+    app:hl_dy="0dp"
+    app:hl_shadowColor="@color/default_shadow_color"
+    app:hl_shadowLimit="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dip"
+        android:paddingBottom="15dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <ImageView
+                android:id="@+id/iv_fosterlivelist_call"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_foster_call" />
+
+            <TextView
+                android:id="@+id/tv_fosterlivelist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@id/iv_fosterlivelist_call"
+                android:gravity="center_vertical"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="179dip"
+            android:layout_marginBottom="15dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <ImageView
+                android:id="@+id/iv_fosterlivelist_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/cover_fm" />
+
+            <ImageView
+                android:id="@+id/iv_fosterlivelist_qp"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="15dip"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_foster_screen" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="8dip">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fosterlivelist_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_fosterlivelist_petname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@id/rv_fosterlivelist_pet"
+                android:gravity="center_vertical"
+                android:text="TextView"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.haotang.pet.view.ShadowLayout>

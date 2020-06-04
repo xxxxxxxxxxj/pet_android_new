@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_marginBottom="5dip">
+
+        <ImageView
+            android:id="@+id/iv_item_petbottom_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_icon_unnet_circle" />
+
+        <ImageView
+            android:id="@+id/iv_item_petbottom_selectbg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/icon_selectbg_alpha" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_petbottom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/a666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_petbottom_itemvipprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:text="VIP:"
+        android:textColor="@color/aD0021B"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_item_petbottom_itemprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>

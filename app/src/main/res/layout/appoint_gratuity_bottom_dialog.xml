@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rv_close"
+        android:layout_above="@+id/rv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="350dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pet_data_setback">
+
+        <ImageView
+            android:id="@+id/iv_gratuity_bottomdia_close"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_appoint_close" />
+
+        <ImageView
+            android:id="@+id/iv_beautician_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tv_beautician_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/iv_beautician_head"
+            android:gravity="center"
+            android:text="黄秋源"
+            android:textColor="#FF333333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_beautician_address"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_beautician_name"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/iv_beautician_head"
+            android:text="珠江帝景店"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_beautician_level"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_beautician_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/tv_beautician_address"
+            android:text="中级美容师"
+            android:textColor="#FF333333"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_beautician_head"
+            android:layout_marginTop="20dp"
+            android:background="#FFEEEEEE" />
+        <LinearLayout
+            android:id="@+id/ll_gratuity_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="18.5dp"
+                android:layout_height="19.5dp"
+                android:src="@drawable/tip_icon"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:id="@+id/tv_gratuity_content"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="打赏金额将全部转给美容师"
+                android:textColor="#FFBB996C"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:overScrollMode="never"
+            android:id="@+id/rv_gratuity_price"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ll_gratuity_tip"
+            android:layout_marginTop="15dp"
+            android:layout_height="72dp"/>
+        <TextView
+            android:id="@+id/tv_gratuity_mark"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:textColor="#666666"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rv_gratuity_price"
+            />
+        <Button
+            android:id="@+id/btn_gratuity_bottomdia"
+            android:layout_width="290dip"
+            android:layout_height="54dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/bg_red_jianbian_icon"
+            android:text="打赏美容师"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

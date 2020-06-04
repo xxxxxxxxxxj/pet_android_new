@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_pop_dimess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_qrpop_bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_qrpop_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_topround_20"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tv_qrpop_conponname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="优惠券名称：满15减5"
+                android:textStyle="bold"
+                android:textColor="#ff333333"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_qrpop_qrcode"
+                android:layout_width="179dp"
+                android:layout_height="179dp"
+                android:layout_below="@+id/tv_qrpop_conponname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tv_qrpop_usetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_qrpop_qrcode"
+                android:layout_centerHorizontal="true"
+                android:text="正在使用优惠券二维码"
+                android:textColor="#ff666666"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_qrpop_asktext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_qrpop_usetext"
+                android:layout_centerHorizontal="true"
+                android:text="是否成功使用请询问门店工作人员"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/iv_qrcodepop_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_usecard_yellow"
+                android:layout_below="@+id/tv_qrpop_asktext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_qrcodepop_top"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:paddingBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_useconpon_yellow"
+            />
+    </RelativeLayout>
+</RelativeLayout>

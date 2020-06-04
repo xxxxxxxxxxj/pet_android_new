@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <include
+        android:id="@+id/rl_mallorderconfirm_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mallorderconfirm_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_mallorderconfirm_submit"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_jianbian"
+            android:gravity="center"
+            android:text="去付款"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_mallorderconfirm_submit"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="需付款 : "
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_mallorderconfirm_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_mallorderconfirm_bottom"
+        android:layout_below="@id/rl_mallorderconfirm_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_mallorderconfirm_address_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mallorderconfirm_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:paddingLeft="30dip"
+                    android:paddingRight="17dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_shr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_phone"
+                        android:text="收货人："
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_mallorderconfirm_address_right"
+                        android:layout_width="7dip"
+                        android:layout_height="11.5dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_right_more" />
+
+                    <ImageView
+                        android:id="@+id/iv_mallorderconfirm_address"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mall_address" />
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/iv_mallorderconfirm_address_right"
+                        android:layout_toRightOf="@id/iv_mallorderconfirm_address"
+                        android:text="请先填写收货地址"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:layout_marginBottom="15dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/order_line_to_pay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_mallorderconfirm_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_mallorderconfirm_lpk"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_mallorderconfirm_lpk_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_mallorderconfirm_lpk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:textColor="@color/aBBBBBB"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/ll_mallorderconfirm_lpk_more"
+                            android:text="E卡"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mallorderconfirm_yhq"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_mallorderconfirm_yhq_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_mallorderconfirm_yhq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:textColor="@color/aBBBBBB"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/ll_mallorderconfirm_yhq_more"
+                            android:text="优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mallorderconfirm_fx"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <ImageView
+                            android:id="@+id/iv_mallorderconfirm_fx"
+                            android:layout_width="49.5dip"
+                            android:layout_height="24dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_fx_open" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/iv_mallorderconfirm_fx"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="返现抵扣"
+                                android:textColor="@color/a333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_mallorderconfirm_fxdk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mallorderconfirm_yqm"
+                android:layout_width="match_parent"
+                android:layout_height="43dip"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip">
+
+                <EditText
+                    android:id="@+id/et_mallorderconfirm_yqm"
+                    android:layout_width="91dip"
+                    android:layout_height="27dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_order_pay_et1"
+                    android:gravity="center"
+                    android:hint="请输入邀请码"
+                    android:imeOptions="actionDone"
+                    android:numeric="integer"
+                    android:textColor="@color/a333333"
+                    android:textColorHint="@color/a999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="美容师邀请码"
+                    android:textColor="@color/a333333"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="27dip"
+                android:paddingBottom="15dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_totalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_totalprice"
+                        android:text="商品总金额"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mallorderconfirm_yf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_yf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_yf"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="运费"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_mallorderconfirm_yf_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/aD1494F"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mallorderconfirm_couponprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_couponprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_couponprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/reduce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mallorderconfirm_fxprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_fxprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_fxprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/reduce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="返现抵扣"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mallorderconfirm_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_cardprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mallorderconfirm_cardname_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_mallorderconfirm_cardprice"
+                        android:text="支付"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textview_insideCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="center_vertical"
+                    android:text="内部优惠"
+                    android:textColor="@color/a333333" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

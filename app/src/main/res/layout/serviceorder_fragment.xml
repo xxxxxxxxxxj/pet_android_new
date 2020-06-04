@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        style="@style/order_top_img_shadow" />
+
+    <LinearLayout
+        style="@style/order_content_style">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/mTabLayout_4"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/af6f8fa"
+            tl:tl_iconHeight="32dp"
+            tl:tl_iconWidth="54dp"
+            tl:tl_indicator_color="@color/af6f8fa"
+            tl:tl_indicator_height="0dp"
+            tl:tl_textSelectColor="@color/af6f8fa"
+            tl:tl_textUnselectColor="@color/af6f8fa"
+            tl:tl_textsize="0sp"
+            tl:tl_underline_color="@color/af6f8fa"
+            tl:tl_underline_height="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/ll_order_default"
+                layout="@layout/recycler_emptyview"
+                android:visibility="gone" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/af6f8fa"
+                android:paddingTop="10dip">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/af6f8fa" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

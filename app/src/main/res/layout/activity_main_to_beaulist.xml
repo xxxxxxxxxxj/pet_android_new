@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/a3a3636"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip">
+
+        <LinearLayout
+            android:id="@+id/ll_mainto_beaulist_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ib_mainto_beaulist_titlebar_serch"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_worker_serch" />
+
+            <ImageView
+                android:id="@+id/ib_mainto_beaulist_titlebar_listorgrid"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_workerlist_list" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_mainto_beaulist_titlebar_back"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_mainto_beaulist_titlebar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/ll_mainto_beaulist_titlebar_right"
+            android:layout_toRightOf="@id/ib_mainto_beaulist_titlebar_back"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TITLE_SIZE" />
+    </RelativeLayout>
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/mrl_mainto_beaulist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_size_type="normal"
+        app:wave_color="#90ffffff"
+        app:wave_height_type="normal"
+        app:wave_show="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mainto_beaulist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@color/af8f8f8" />
+
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>

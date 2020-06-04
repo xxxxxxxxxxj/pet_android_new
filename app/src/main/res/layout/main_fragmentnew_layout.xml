@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/af6f8fa">
+
+    <com.haotang.pet.view.MyScrollView
+        android:id="@+id/sv_main_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="362dp">
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_mainfragment_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:id="@+id/ll_banner_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/banner_bottom"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--头部-->
+                <RelativeLayout
+                    android:id="@+id/head_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_mainfrag_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_9a9999_round15"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_width="38dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icon_homeloc_red" />
+
+                        <TextView
+                            android:id="@+id/tv_home_shopname_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="请选择门店"
+                            android:textColor="#ff002241"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icon_home_down" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_mainfrag_shopshow"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/iv_mainfrag_cardshow"
+                        android:clickable="false"
+                        android:src="@drawable/icon_home_shopred" />
+
+                    <ImageView
+                        android:id="@+id/iv_mainfrag_cardshow"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="11.5dp"
+                        android:src="@drawable/icon_home_cardred" />
+                </RelativeLayout>
+                <!--九宫格-->
+                <com.haotang.pet.view.ShadowLayout
+                    android:id="@+id/sl_mainfrag_services"
+                    android:layout_marginTop="220dp"
+                    app:hl_dy="5dp"
+                    style="@style/shadow_main_fragment_style">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_mainfragment_service"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+
+                </com.haotang.pet.view.ShadowLayout>
+                <!--新人专区-->
+                <ImageView
+                    android:id="@+id/iv_mainfragment_newpeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone" />
+                <!--中部小icon-->
+                <LinearLayout
+                    android:id="@+id/ll_mainfrag_center"
+                    android:background="@drawable/first_shadow_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_middletitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="25dp"
+                        tools:text="宠物家Ek"
+                        android:textColor="#ff002241"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_middelsubtitle"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="6dp"
+                        tools:text="宠物家Ek"
+                        android:maxEms="12"
+                        android:ellipsize="end"
+                        android:textColor="#ff002241"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mainfrag_smallicons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_mainfragent_smallicons"
+                                android:overScrollMode="never"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <com.haotang.pet.view.ScrollLineView
+                                android:id="@+id/scroll_line_view"
+                                android:layout_below="@+id/rv_mainfragent_smallicons"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </com.haotang.pet.view.ScrollLineView>
+
+                            <FrameLayout
+                                android:layout_alignTop="@+id/rv_mainfragent_smallicons"
+                                android:layout_alignBottom="@+id/rv_mainfragent_smallicons"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:id="@+id/ll_mainfrag_moreicons"
+                                    android:layout_gravity="center_vertical|right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="34dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:visibility="gone"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/bg_b30000_round16"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="5dp"
+                                        android:text="滑动查看更多"
+                                        android:textColor="#ffffffff"
+                                        android:textSize="12sp" />
+
+                                    <ImageView
+                                        android:layout_width="11.5dp"
+                                        android:layout_height="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="11dp"
+                                        android:src="@drawable/icon_more_right" />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </RelativeLayout>
+
+
+                        <com.haotang.pet.view.NiceImageView
+                            android:id="@+id/nv_mainfrag_centericonone"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:visibility="gone"
+                            android:scaleType="centerCrop"
+                            app:corner_radius="5dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--寄养-->
+                <LinearLayout
+                    android:id="@+id/sl_mainfrag_hotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_fostertitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        tools:text="北京寄养"
+                        android:textColor="#ff002241"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_fostersubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="6dp"
+                        android:maxEms="12"
+                        android:lines="1"
+                        android:visibility="gone"
+                        tools:text="寄养服务寄养服务寄养服务寄养服务"
+                        android:ellipsize="end"
+                        android:textColor="#ff002241"
+                        android:textSize="14sp" />
+
+                    <com.haotang.pet.view.NiceImageView
+                        android:id="@+id/vn_mainfrag_fostericon"
+                        android:layout_width="match_parent"
+                        android:layout_height="285dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginBottom="20dp"
+                        app:corner_radius="10dp" />
+                </LinearLayout>
+                <!--推荐美容师 android:background="@drawable/topleft_bottomright_round"-->
+                <RelativeLayout
+                    android:background="@drawable/first_shadow_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_beautytip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="52dp"
+                        android:maxEms="6"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:text="门店美容师"
+                        android:textColor="#ff002241"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_beautynum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_mainfrag_beautytip"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="6dp"
+                        android:text="0名美容师可为您服务"
+                        android:textColor="#ff002241"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="188.5dp"
+                        android:layout_height="185dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_home_shopbeauty" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_mainfrag_beauty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:overScrollMode="never"
+                        android:layout_marginTop="136dp" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_mainfrag_scroll"
+                        android:paddingBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/rv_mainfrag_beauty"
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/bg_f6f8fa_round3"/>
+                        <View
+                            android:id="@+id/v_mainfrag_line"
+                            android:layout_width="40dp"
+                            android:layout_height="5dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/bg_cbd5de_round3"
+                            android:layout_gravity="center_vertical"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_allbeauty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:text="全部美容师 >"
+                        android:textColor="#ff002241"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rv_mainfrag_beauty"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <!--运营Banner-->
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_mainfragment_bottom"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="宠圈精选"
+                        android:textColor="#ff002241"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="189dp"
+                        android:layout_height="134dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="22dp"
+                        android:src="@drawable/icon_mainpet_cicler" />
+
+                </RelativeLayout>
+                <!--宠圈列表-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_mainfrag_petcicler"
+                    android:layout_marginTop="-10dp"
+                    android:overScrollMode="never"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_mainfrag_morepetcicler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="更多宠圈动态 >"
+                    android:textColor="#ff002241"
+                    android:textSize="14sp" />
+                <!--运营位图片-->
+                <com.haotang.pet.view.ShadowLayout
+                    android:id="@+id/nv_mainfrag_bottomholder_shadow"
+                    android:visibility="gone"
+                    style="@style/shadow_main_fragment_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.haotang.pet.view.NiceImageView
+                        android:id="@+id/nv_mainfrag_bottomholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="118dp"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"
+                        app:corner_radius="20dp" />
+                </com.haotang.pet.view.ShadowLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="-20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_main_petcicler_top" />
+                <!--宠物百科-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_red_jianbian_topleftround">
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_petknow_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:text="宠物百科"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="206dp"
+                        android:layout_height="209dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/icon_home_petkonwleg" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_mainfrag_petknow"
+                        android:layout_marginLeft="5dp"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_mainfrag_petknow_tip"
+                        android:layout_marginTop="60dp" />
+
+                    <TextView
+                        android:id="@+id/tv_mainfrag_morepetknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rv_mainfrag_petknow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="更多百科文章 >"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_main_redshaow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:text="已经到底啦～"
+                    android:textColor="#ff1a1a1a"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.haotang.pet.view.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_maintop_gone"
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:background="@drawable/bg_maintop_redjianbian"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_mainfrag_locgone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="28.5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_homeloc_white" />
+
+            <TextView
+                android:id="@+id/tv_home_shopname_gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="请选择门店"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_homedown_white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_mainfrag_shopgone"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="26.5dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/iv_mainfrag_cardgone"
+            android:clickable="false"
+            android:src="@drawable/icon_home_shopwhite" />
+
+        <ImageView
+            android:id="@+id/iv_mainfrag_cardgone"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="26.5dp"
+            android:layout_marginRight="11.5dp"
+            android:src="@drawable/icon_home_cardwhite" />
+    </RelativeLayout>
+</RelativeLayout>

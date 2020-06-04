@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.haotang.pet.view.ShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        app:hl_cornerRadius="10dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="@color/default_shadow_color"
+        app:hl_shadowLimit="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_round10">
+            <com.haotang.pet.view.ShadowLayout
+                android:id="@+id/shadowLayout"
+                app:hl_cornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                style="@style/shadow_style_base"
+                app:hl_shadowColor="@color/bt_3"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.haotang.pet.view.NiceImageView
+                    android:id="@+id/nv_shopeva_head"
+                    android:scaleType="centerCrop"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    app:corner_radius="16dp" />
+            </com.haotang.pet.view.ShadowLayout>
+
+
+            <TextView
+                android:id="@+id/tv_shopeva_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="17.5dp"
+                android:layout_toRightOf="@+id/shadowLayout"
+                android:text="托塔天王"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_shopeva_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:text="2018–06-30"
+                android:textColor="#ff9fa7b9"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shopeva_name"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginTop="5.5dp"
+                android:layout_toRightOf="@+id/shadowLayout"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_eva_one"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_default" />
+
+                <ImageView
+                    android:id="@+id/img_eva_two"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_default" />
+
+                <ImageView
+                    android:id="@+id/img_eva_thr"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_default" />
+
+                <ImageView
+                    android:id="@+id/img_eva_four"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_default" />
+
+                <ImageView
+                    android:id="@+id/img_eva_five"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_default" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_shopeva_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shadowLayout"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:text="环境很好，服务也很好，美容师对我家的宝宝是超级的负责，一回生二回熟现在超级配合～"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_shopdetal_icons"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shopeva_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rv_shopdetal_icons"
+                android:orientation="vertical">
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tfl_shopeva_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dip" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_shopeva_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tfl_shopeva_tag"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_shopeva_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="中级洗护套餐"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_shopeva_extraitem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_shopeva_type"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="单项"
+                            android:textColor="#ff999999"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_shopeva_item"
+                            android:layout_width="8dp"
+                            android:layout_height="6dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icon_down_gray" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_shopeva_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="服务时间: 2020-06-22 16:10"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tfl_shopeva_itemtag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_eva_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/tfl_shopeva_itemtag"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@drawable/icon_eva_replytop" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#F6F8FA">
+
+                        <ImageView
+                            android:id="@+id/iv_shopeva_replyhead"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/tv_shopeva_replyname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12.5dp"
+                            android:layout_toRightOf="@+id/iv_shopeva_replyhead"
+                            android:text="宠物家回复"
+                            android:textColor="#ff717985"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_eva_replycontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_shopeva_replyname"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#ff717985"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </com.haotang.pet.view.ShadowLayout>
+</RelativeLayout>

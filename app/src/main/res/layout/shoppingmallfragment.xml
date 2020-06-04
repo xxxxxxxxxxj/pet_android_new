@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f8f8ff8"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/shop_bar"
+        android:background="@color/aD1494F"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_shopmallfrag_title"
+        android:layout_below="@+id/shop_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_red_jianbian_updown"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_shopmallfrag_gwc"
+            android:layout_width="30dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_shopmallfrag_gwcnum"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/bg_red_circle"
+                android:gravity="center"
+                android:text="99+"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopmall_gwc_selector" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shopmallfrag_order"
+            android:layout_width="30dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dip"
+            android:layout_toLeftOf="@id/rl_shopmallfrag_gwc">
+
+            <TextView
+                android:id="@+id/tv_commodity_ordernum"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/bg_red_circle"
+                android:gravity="center"
+                android:text="99+"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopmall_order_selector" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/rl_shopmallfrag_change"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_change_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <ImageView
+                    android:layout_width="21.7dp"
+                    android:layout_height="21.7dp"
+                    android:src="@drawable/icon_dog_small"
+                    android:id="@+id/iv_shopmall_changeicon"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_shopmall_changename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rl_change_icon"
+                android:text="狗狗"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginLeft="5dp"
+                />
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:src="@drawable/iv_myfragment_right"
+                android:layout_toRightOf="@+id/tv_shopmall_changename"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="16dp"
+                android:scaleType="fitXY"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/cet_shopmallfrag"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_white_round17"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/rl_shopmallfrag_order"
+            android:layout_toRightOf="@+id/rl_shopmallfrag_change">
+            <ImageView
+                android:id="@+id/iv_shopmall_search"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/search_bar_icon_normal"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入搜索关键字"
+                android:textColor="#ffbbbbbb"
+                android:textSize="13sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_shopmall_search"
+                android:layout_marginLeft="5dp"
+                />
+
+        </RelativeLayout>
+        <com.haotang.pet.view.ClearEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+
+            android:background="@drawable/edittext_serch_shop_back"
+            android:ems="10"
+            android:hint="搜索"
+            android:paddingLeft="30dip"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:visibility="gone"
+            android:textCursorDrawable="@drawable/editshow"
+            android:textSize="13sp"></com.haotang.pet.view.ClearEditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_shopmallfrag_title">
+
+        <ImageView
+            android:id="@+id/img_scroll_top"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/mall_scroll_top"
+            android:visibility="gone" />
+
+        <com.haotang.pet.pulltorefresh.PullToRefreshHeadGridView
+            android:id="@+id/ptrhgv_shopmallfrag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:showDividers="none" />
+
+        <LinearLayout
+            android:id="@+id/ll_shopmallorder_nonet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="106.5dip"
+                android:layout_height="96dip"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopmallorder_nonet_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="30dip"
+                android:text="啊哦~网络竟然崩溃了 刷新看看"
+                android:textColor="@color/a999999"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_shopmallorder_nonet"
+                android:layout_width="128.5dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_shopmallorder_nodata_selector"
+                android:gravity="center"
+                android:text="刷新"
+                android:textColor="@color/aBB996C"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

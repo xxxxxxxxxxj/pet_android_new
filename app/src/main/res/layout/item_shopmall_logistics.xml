@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dip"
+        android:paddingLeft="40dip"
+        android:paddingRight="15dip"
+        android:paddingTop="12dip">
+
+        <TextView
+            android:id="@+id/tv_item_shopmall_logistics_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:autoLink="email|phone|web"
+            android:text="TextView"
+            android:textColor="@color/a666666"
+            android:includeFontPadding="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_item_shopmall_logistics_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:text="TextView"
+            android:textColor="@color/a999999"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vw_item_shopmall_logistics_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="40dip"
+        android:background="@color/aEEEEEE" />
+</LinearLayout>

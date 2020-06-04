@@ -1,0 +1,2 @@
+include ':app', ':dialog', ':wheelview', ':pickerview', ':jiaozivideoplayer', ':FlycoRoundView_Lib', ':FlycoTabLayout_Lib', ':stagger_library', ':material_library', ':countdown_library', ':crop_lib', ':guideview', ':playerlibrary', ':api'
+

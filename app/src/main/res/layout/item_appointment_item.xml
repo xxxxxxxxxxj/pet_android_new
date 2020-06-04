@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dip"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_item_appointment_item_root"
+    android:layout_marginRight="5dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:layout_marginBottom="5dip">
+
+        <TextView
+            android:id="@+id/tv_item_appointment_item_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="15.5dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_round1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_item_appointment_item_img"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="70dip"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_appointment_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/a333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_item_appointment_item_vipprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:visibility="invisible"
+            android:singleLine="true"
+            android:text="VIP:"
+            android:textColor="@color/aD0021B"
+            android:textSize="10sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_item_appointment_item_add"
+                android:layout_width="26dip"
+                android:layout_height="26dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_add_item_no" />
+
+            <TextView
+                android:id="@+id/tv_item_appointment_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_item_appointment_item_add"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:text="￥"
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

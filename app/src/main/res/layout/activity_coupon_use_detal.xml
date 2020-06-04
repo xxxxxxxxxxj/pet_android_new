@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F8F8">
+
+    <include
+        android:id="@+id/rl_giftcard_sure_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_couponuse_tvone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="共"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_allnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_couponuse_tvone"
+            android:text="0"
+            android:textColor="#ffbb996d"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_tvtwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_couponuse_allnum"
+            android:text="张"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_tvthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_couponuse_tvtwo"
+            android:text="已使用"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_usenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_couponuse_tvthree"
+            android:text="0"
+            android:textColor="#ffbb996d"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_couponuse_usenum"
+            android:text="张"
+            android:textColor="#ff666666"
+            android:textSize="12sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_couponuse_money"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_couponuse_rmb"
+            android:text="已用优惠"
+            android:textColor="#ff666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_couponuse_money"
+            android:layout_toLeftOf="@+id/tv_couponuse_money"
+            android:text="¥"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_couponuse_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="0"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:background="#F0F5F9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_couponuse_used"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_couponuse_used"
+                        android:background="#FFE6E6E6" />
+
+                    <TextView
+                        android:id="@+id/tv_couponuse_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:text="已使用"
+                        android:textColor="#ff808080"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_couponuse_used"
+                        android:background="#FFE6E6E6" />
+                </RelativeLayout>
+
+                <com.haotang.pet.view.MListview
+                    android:id="@+id/rv_couponuse_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:divider="@null"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_couponuse_nouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_couponuse_used"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_couponuse_nouse"
+                        android:background="#FFE6E6E6" />
+
+                    <TextView
+                        android:id="@+id/tv_couponuse_nouse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:text="未使用"
+                        android:textColor="#ff808080"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_couponuse_nouse"
+                        android:background="#FFE6E6E6" />
+                </RelativeLayout>
+
+                <com.haotang.pet.view.MListview
+                    android:id="@+id/rv_couponuse_nouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:divider="@null" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rl_couponuse_null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/iv_couponuse_null"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/icon_noproduction" />
+                <TextView
+                    android:id="@+id/tv_couponuse_null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_couponuse_null"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="暂无使用明细"
+                    android:textColor="#ff717985"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

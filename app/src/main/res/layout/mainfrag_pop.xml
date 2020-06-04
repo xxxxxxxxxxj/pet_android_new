@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20.5dip"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+    <ImageView
+        android:layout_width="4.5dip"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/mainfrag_jiantou"
+        android:layout_height="4.5dip" />
+
+    <TextView
+        android:id="@+id/tv_mainfrag_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="16dip"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="TextView"
+        android:background="@drawable/tv_round"
+        android:textColor="@color/a333333"
+        android:textSize="10sp" />
+
+
+</LinearLayout>

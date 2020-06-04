@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dip"
+        android:layout_height="336dip"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_white_round1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip">
+
+            <TextView
+                android:id="@+id/tv_wechatqrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:text="微信号:"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/ib_wechatqrcode_copy"
+                android:layout_width="50dip"
+                android:layout_height="23dip"
+                android:background="@drawable/orange_round_copy" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/aEEEEEE" />
+
+        <ImageView
+            android:id="@+id/iv_wechatqrcode"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dip"
+            android:text="长按保存到相册"
+            android:textColor="@color/a666666"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_pw_main_close"
+        android:layout_width="36dip"
+        android:layout_height="36dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/icon_close_qrcode"
+        android:scaleType="fitXY" />
+</LinearLayout>

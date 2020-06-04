@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/titlebar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:paddingRight="10dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:id="@+id/layout_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/aEEEEEE"/>
+
+                <ImageView
+                    android:id="@+id/img_people"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/address_people"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_left"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/layout_right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a333333"
+                        android:text="联 系  人："/>
+
+                    <EditText
+                        android:id="@+id/edit_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:hint="请输入联系人"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/a333333"
+                        android:textColorHint="@color/acccccc"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EBE9E7"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43.5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/a333333"
+                        android:text="联系方式："/>
+
+                    <EditText
+                        android:id="@+id/edit_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:hint="请输入手机号"
+                        android:maxLength="11"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/a333333"
+                        android:textColorHint="@color/acccccc"
+                        android:textSize="15sp"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="#EBE9E7" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_choose_service_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" >
+
+                <TextView
+                    android:id="@+id/imageView_icon_addService_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="联系地址："
+                    android:textColor="@color/a333333"
+                    android:src="@drawable/cet_selectarea_add" />
+
+                <TextView
+                    android:id="@+id/textView_icon_addService_area_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView_icon_addService_address"
+                    android:hint="您所在的小区/大厦/街道名"
+                    android:paddingLeft="10dip"
+                    android:paddingTop="20dip"
+                    android:paddingBottom="20dip"
+                    android:textColor="@color/a333333"
+                    android:textColorHint="@color/acccccc"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:background="#EBE9E7" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" >
+                <TextView
+                    android:id="@+id/textview_address_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="详细地址："
+                    android:textColor="@color/a333333"
+                    android:src="@drawable/cet_selectarea_add" />
+                <EditText
+                    android:id="@+id/editText_icon_addService_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:hint="街道楼牌号等"
+                    android:maxLength="40"
+                    android:paddingTop="20dip"
+                    android:paddingBottom="20dip"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/a333333"
+                    android:textColorHint="@color/acccccc"
+                    android:layout_toRightOf="@+id/textview_address_detail"
+                    android:textSize="15sp" >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:background="#EBE9E7" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_addService_sure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_complaint_bottom_selector"
+            android:text="确认添加"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/af8f8f8"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dip"
+                android:lineSpacingExtra="5dp"
+                android:text="为了美容师能更好的为您提供服务，请您输入服务范围内的地址。如地址超区美容师不能进行服务。请您谅解。"
+                android:textSize="14sp"
+                android:textColor="#96928D" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_petadd_submit"
+        android:layout_width="match_parent"
+        android:layout_height="70.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dip"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_common_redbtn"
+        android:paddingBottom="20dp"
+        android:text="删除地址"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

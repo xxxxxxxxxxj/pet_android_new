@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip">
+
+        <LinearLayout
+            android:id="@+id/ll_item_appoint_pet_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:hint="切换服务"
+                android:textColor="@color/a666666"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="11.5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_right_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/ll_item_appoint_pet_switch">
+
+            <ImageView
+                android:id="@+id/iv_item_appoint_pet_img"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginRight="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_icon_unnet_circle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_appoint_pet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="TextView"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_appoint_pet_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:hint="TextView"
+                    android:singleLine="true"
+                    android:textColor="@color/a666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/aEEEEEE" />
+</LinearLayout>

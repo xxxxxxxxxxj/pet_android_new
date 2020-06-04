@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_commodity_shopinfo_pop_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/rl_commodity_shopinfo_pop_img"
+            android:layout_width="112dip"
+            android:layout_height="112dip"
+            android:layout_marginLeft="15dip"
+            android:background="@drawable/rl_fourboder_selector">
+
+            <ImageView
+                android:id="@+id/iv_commodity_shopinfo_pop_img"
+                android:layout_width="110dip"
+                android:layout_height="110dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dip"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_commodity_shopinfo_pop_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/btn_commodity_shopinfo_pop_gwc"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:background="#FF3A3636"
+                    android:text="加入购物车"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_commodity_shopinfo_pop_ljgm"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_red_jianbian"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="立即购买"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_commodity_shopinfo_popstr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="TextView"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_commodity_shopinfo_pop_close"
+                android:layout_width="12dip"
+                android:layout_height="12dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/iv_commodity_shopquanyipop_close" />
+
+            <LinearLayout
+                android:id="@+id/ll_commodity_shopinfo_pop_shopinfo"
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:layout_marginLeft="140dip"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip">
+                <TextView
+                    android:id="@+id/tv_commodity_shopinfo_pop_ej"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="#FFFF3A1E"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_commodity_shopinfo_pop_shopprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_commodity_shopinfo_pop_ej"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#FF666666"
+                    android:layout_marginLeft="6dp"
+                    />
+            </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_commodity_shopinfo_pop_shopgg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="TextView"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_commodity_shopinfo_pop_shopkucun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="TextView"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_commodity_shopinfo_pop_bottom"
+                android:layout_below="@id/ll_commodity_shopinfo_pop_shopinfo"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dip"
+                    android:paddingTop="20dip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_commodity_shopinfo_pop_shopggstr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="15dip"
+                        android:text="规格"
+                        android:textColor="@color/a666666"
+                        android:textSize="14sp" />
+
+                    <com.haotang.pet.view.MyGridView
+                        android:id="@+id/mgv_commodity_shopinfo_pop_shopgg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:background="@color/white"
+                        android:horizontalSpacing="10dip"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="2"
+                        android:verticalSpacing="10dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginTop="25dip"
+                        android:text="数量"
+                        android:textColor="@color/a666666"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_commodity_shopinfo_pop_tiaozheng"
+                        android:layout_width="120dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="15dip">
+
+                        <ImageView
+                            android:id="@+id/iv_commodity_shopinfo_pop_shopjian"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/pop_giftcarddetail_notjian"
+                            android:scaleType="fitXY" />
+
+                        <com.haotang.pet.view.ExtendedEditText
+                            android:id="@+id/et_commodity_shopinfo_pop_shopnum"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/bg_giftcard_buy_num"
+                            android:gravity="center"
+                            android:imeOptions="actionDone"
+                            android:numeric="integer"
+                            android:text="1"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_commodity_shopinfo_pop_shopjia"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/pop_giftcarddetail_add"
+                            android:scaleType="fitXY" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

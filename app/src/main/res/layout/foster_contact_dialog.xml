@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fostercontactdialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@color/black"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="239.5dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_topround_20"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingTop="20dip"
+        android:paddingRight="20dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dip">
+
+            <TextView
+                android:id="@+id/tv_fostercontactdialog_wc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="完成"
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="联系人"
+                android:textColor="@color/a002241"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系人"
+                    android:textColor="@color/a717985"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(必填)"
+                    android:textColor="@color/aff3a1e"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_fostercontactdialog_lxr"
+                android:layout_width="0dip"
+                android:layout_height="44dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="4"
+                android:background="@drawable/bg_fosterorder_et"
+                android:gravity="center_vertical"
+                android:hint="请输入联系人"
+                android:imeOptions="actionDone"
+                android:paddingLeft="12dip"
+                android:maxLength="6"
+                android:paddingRight="12dip"
+                android:textColor="@color/a666666"
+                android:textColorHint="@color/a999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系方式"
+                    android:textColor="@color/a717985"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(必填)"
+                    android:textColor="@color/aff3a1e"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_fostercontactdialog_lxfs"
+                android:layout_width="0dip"
+                android:layout_height="44dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="4"
+                android:background="@drawable/bg_fosterorder_et"
+                android:gravity="center_vertical"
+                android:hint="请输入电话号码"
+                android:imeOptions="actionDone"
+                android:numeric="integer"
+                android:maxLength="11"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:textColor="@color/a666666"
+                android:textColorHint="@color/a999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

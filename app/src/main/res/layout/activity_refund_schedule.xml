@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <include
+        android:id="@+id/rl_refund_schedule_titlebar"
+        layout="@layout/titlebar" />
+
+    <TextView
+        android:id="@+id/tv_refund_schedule_lxkf"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/aBB996C"
+        android:gravity="center"
+        android:text="联系客服"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_refund_schedule"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dip"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_refund_schedule_lxkf"
+        android:layout_below="@id/rl_refund_schedule_titlebar" />
+</RelativeLayout>

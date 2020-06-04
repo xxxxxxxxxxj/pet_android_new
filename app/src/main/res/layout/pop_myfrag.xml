@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dip"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_popmyfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="16dip"
+        android:background="@drawable/bg_white_round11"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="TextView"
+        android:textColor="@color/aff3a1e"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:layout_width="8dip"
+        android:layout_height="4dip"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_myfrag_jian" />
+
+</LinearLayout>

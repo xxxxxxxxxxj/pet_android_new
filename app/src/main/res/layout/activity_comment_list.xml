@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="0dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip">
+
+        <Button
+            android:id="@+id/btn_comment_list_all"
+            android:layout_width="80dip"
+            android:layout_height="27dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_comment_select"
+            android:gravity="center"
+            android:text="全部(0)"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_comment_list_img"
+            android:layout_width="80dip"
+            android:layout_height="27dip"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/bg_comment_unselect"
+            android:gravity="center"
+            android:text="有图(0)"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <View
+        android:background="@drawable/bg_oredr_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_comment_list"
+        android:background="@color/af8f8f8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

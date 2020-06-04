@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_appointswitch_top"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_appointswitch_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:paddingLeft="10dip">
+
+        <TextView
+            android:id="@+id/tv_appointswitch_submit"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_jianbian"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_appointswitch_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_appointswitch_submit"
+            android:gravity="center_vertical"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_appointswitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_appointswitch_bottom"
+        android:layout_below="@id/rl_appointswitch_top"
+        android:background="@color/white" />
+</RelativeLayout>

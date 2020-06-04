@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="42dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_hint_arrow"/>
+    <TextView
+        android:text="@string/switch_shop"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="@string/switch_shop_hint"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

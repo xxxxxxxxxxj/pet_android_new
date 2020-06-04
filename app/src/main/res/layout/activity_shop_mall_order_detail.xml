@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haotang.pet.ShopMallOrderDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <include
+        android:id="@+id/ll_shopmallorderdetail_titlebar"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_shopmallorderdetail_dfk"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_shopmallorderdetail_submit"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_jianbian"
+            android:gravity="center"
+            android:text="去付款"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_shopmallorderdetail_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_shopmallorderdetail_submit"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="需付款 : "
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shopmallorderdetail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_shopmallorderdetail_dfk"
+        android:layout_below="@id/ll_shopmallorderdetail_titlebar">
+
+        <ImageView
+            android:id="@+id/img_scroll_top"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/mall_scroll_top"
+            android:visibility="gone" />
+
+
+        <com.haotang.pet.pulltorefresh.PullToRefreshHeadGridView
+            android:id="@+id/ptrhgv_shopmallorderdetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:showDividers="none" />
+
+    </RelativeLayout>
+</RelativeLayout>

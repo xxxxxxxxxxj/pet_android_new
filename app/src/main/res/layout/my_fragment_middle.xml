@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dip"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="33.5dip"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_myfrag_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutMyPet"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_mypet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的宠物"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMyAddress"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_address" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地址管理"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCircle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的宠圈"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMyClo"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_clo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百科收藏"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutMyEva"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_eva" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的评价"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutrecord"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的账单"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFeedBack"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_feedback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="反馈与建议"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSet"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_marginBottom="8dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_myfrag_set" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:textColor="@color/a555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.haotang.pet.view.ShadowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sl_myfrag_jyzb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dip"
+            android:background="@color/white"
+            app:hl_cornerRadius="12.5dp"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="@color/default_shadow_color"
+            app:hl_shadowLimit="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dip"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_myfrag_jyzb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <LinearLayout
+                        android:id="@+id/ll_myfrag_jyzb_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dip"
+                            android:text="更多"
+                            android:textColor="@color/a717985"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="7dip"
+                            android:layout_height="11.5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_right_more" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/ll_myfrag_jyzb_right"
+                        android:text="寄养直播"
+                        android:textColor="@color/a002241"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginBottom="12dip"
+                    android:background="@color/aEEEEEE" />
+
+                <TextView
+                    android:id="@+id/tv_myfrag_jyzb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:text="TextView"
+                    android:textColor="@color/a384359"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="5dip">
+
+                    <com.haotang.pet.view.ShadowLayout
+                        android:id="@+id/sl_myfrag_jyzb_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:hl_cornerRadius="23.25dp"
+                        app:hl_dx="0dp"
+                        app:hl_dy="0dp"
+                        app:hl_shadowColor="@color/default_shadow_color"
+                        app:hl_shadowLimit="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_myfrag_jyzb_fjnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dip"
+                            android:background="@drawable/bg_ff3a1e_round23"
+                            android:gravity="center"
+                            android:paddingLeft="20dip"
+                            android:paddingRight="20dip"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </com.haotang.pet.view.ShadowLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_myfrag_jyzb_pet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/sl_myfrag_jyzb_num">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </com.haotang.pet.view.ShadowLayout>
+    </LinearLayout>
+</LinearLayout>

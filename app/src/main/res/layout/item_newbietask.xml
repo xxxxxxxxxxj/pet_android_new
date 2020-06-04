@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dip"
+    android:background="@drawable/main_local_bg_shade">
+
+    <ImageView
+        android:id="@+id/iv_item_newbietask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_production_default" />
+
+    <Button
+        android:id="@+id/btn_item_newbietask"
+        android:layout_width="90dip"
+        android:layout_height="34dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/bg_button_orange"
+        android:ellipsize="end"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

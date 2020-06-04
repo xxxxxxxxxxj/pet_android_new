@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="29dip"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="29dip"
+        android:layout_gravity="center_vertical"
+        android:layout_height="29dip"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/iv_item_justnow_userimgbottom"
+            android:layout_width="10dip"
+            android:layout_height="10dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_icon_unnet_circle"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/civ_item_justnow_adapter"
+            android:layout_width="29dip"
+            android:layout_height="29dip"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_icon_unnet_circle" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_justnow_adapter_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_justnow_adapter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aBB996C"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tv_item_justnow_adapter_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:text="TextView"
+                android:textColor="@color/aBB996C"
+                android:textSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

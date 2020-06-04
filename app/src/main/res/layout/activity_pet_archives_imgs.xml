@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/mrl_pet_archives_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_size_type="normal"
+        app:wave_color="#90ffffff"
+        app:wave_height_type="normal"
+        app:wave_show="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pet_archives_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>

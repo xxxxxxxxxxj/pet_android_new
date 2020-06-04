@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af7f7f7">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="支付"
+                    android:textColor="@color/a333333"
+                    android:textSize="21sp" />
+
+                <ImageView
+                    android:id="@+id/iv_qrcodenew_close"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_appoint_close" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dip"
+                    android:background="@color/white"
+                    app:hl_cornerRadius="10dp"
+                    app:hl_dx="0dp"
+                    app:hl_dy="0dp"
+                    app:hl_shadowColor="@color/default_shadow_color"
+                    app:hl_shadowLimit="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_qrcodenew_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="40dip"
+                            android:layout_marginBottom="30dip"
+                            android:textColor="@color/a333333"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_rqcodenew"
+                            android:layout_width="180dip"
+                            android:layout_height="180dip"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dip"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dip"
+                            android:text="点击二维码放大，出示二维码完成支付"
+                            android:textColor="@color/a666666"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginBottom="20dip"
+                            android:background="@color/aEEEEEE" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_rqcodenew_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginBottom="20dip"
+                            android:paddingLeft="20dip"
+                            android:paddingRight="20dip">
+
+                            <LinearLayout
+                                android:id="@+id/ll_rqcodenew_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical|right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dip"
+                                    android:text="切换卡片"
+                                    android:textColor="@color/a666666"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="7dip"
+                                    android:layout_height="11.5dip"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/icon_right_more" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dip"
+                                android:layout_toLeftOf="@id/ll_rqcodenew_more"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_rqcodenew_cardimg"
+                                    android:layout_width="67.5dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginRight="10dip"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/icon_production_default" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_rqcodenew_cardname"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:singleLine="true"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/a333333"
+                                        android:textSize="17sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_rqcodenew_carddesc"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:singleLine="true"
+
+                                        android:textColor="@color/a666666"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.haotang.pet.view.ShadowLayout>
+
+                <LinearLayout
+                    android:layout_width="84dip"
+                    android:layout_height="84dip"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_code_circle"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_qrcodenew_img"
+                        android:layout_width="59dip"
+                        android:layout_height="59dip"
+                        android:layout_marginTop="4dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/user_icon_unnet_circle" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="10dp"
+                app:hl_cornerRadius="10dp"
+                app:hl_topShow="false"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowColor="@color/default_shadow_color"
+                app:hl_shadowLimit="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_rqcodenew_fx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dip"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dip">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_rqcodenew_fxprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dip"
+                                android:text="¥0"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="22dip"
+                                android:layout_height="23dip"
+                                android:layout_marginRight="13dip"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_qrcode_fx" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="返现"
+                                android:textColor="@color/a4d4d4d"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/aEEEEEE" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_rqcodenew_yhq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dip"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dip">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_rqcodenew_yhqnum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dip"
+                                android:text="0张可用"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="22dip"
+                                android:layout_height="20dip"
+                                android:layout_marginRight="13dip"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_qrcode_yhq" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="优惠券"
+                                android:textColor="@color/a4d4d4d"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.haotang.pet.view.ShadowLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

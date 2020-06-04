@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mv_fostershoplocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_fostershoplocation_back"
+        android:layout_width="37dip"
+        android:layout_height="37dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_fosternav_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_topround_20">
+
+        <com.haotang.pet.view.ShadowLayout
+            android:id="@+id/sl_fostershoplocation"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dip"
+            app:hl_cornerRadius="16dip"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="@color/default_shadow_color"
+            app:hl_shadowLimit="10dp">
+
+            <Button
+                android:id="@+id/btn_fostershoplocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_red_round16"
+                android:gravity="center"
+                android:text="导航"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.haotang.pet.view.ShadowLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/sl_fostershoplocation"
+            android:orientation="vertical"
+            android:paddingLeft="15dip"
+            android:paddingTop="20dip"
+            android:paddingRight="15dip">
+
+            <TextView
+                android:id="@+id/tv_fostershoplocation_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_fostershoplocation_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

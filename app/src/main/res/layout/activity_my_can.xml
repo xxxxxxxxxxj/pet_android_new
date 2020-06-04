@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.haotang.pet.MyCanActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:id="@+id/osv_mycan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycan_wdl"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:background="@color/a3a3636"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_mycan_wdl"
+                        android:layout_width="150dip"
+                        android:layout_height="29dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/iv_member_wdl" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycan_userimg_wdl"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_icon_unnet_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/iv_mycan_wdl"
+                        android:layout_toRightOf="@id/iv_mycan_userimg_wdl"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="bottom"
+                            android:singleLine="true"
+                            android:text="宠物家"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="您身边的宠物服务管家"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_mycan_ydl"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dip"
+                    android:background="@drawable/bg_red_jianbian_updown"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <ImageView
+                        android:id="@+id/iv_mycan_gticon"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="15dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mycan_guantou_img" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_mycan_gtzs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="罐头币总数(个)"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_mycan_dqksy"
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:text="当前可使用："
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <RelativeLayout
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tv_mycan_jjdz"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="即将到账："
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_mycan_wenhao"
+                                    android:layout_width="20dip"
+                                    android:layout_height="20dip"
+                                    android:layout_marginLeft="5dip"
+                                    android:layout_toRightOf="@id/tv_mycan_jjdz">
+
+                                    <ImageView
+                                        android:layout_width="11.5dip"
+                                        android:layout_height="11.5dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/appoint_wenhao_img" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mycan_verticalbanner"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip">
+
+                <ImageView
+                    android:id="@+id/iv_mycan_verticalbanner"
+                    android:layout_width="43.5dip"
+                    android:layout_height="25dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/member_gtdt_img" />
+
+                <com.haotang.pet.verticalbanner.VerticalBannerView
+                    android:id="@+id/vbv_mycan_verticalbanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/iv_mycan_verticalbanner"
+                    app:animDuration="900"
+                    app:gap="3000"></com.haotang.pet.verticalbanner.VerticalBannerView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mycan_smsgt"
+                android:layout_width="match_parent"
+                android:layout_height="78.5dip"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dip"
+                    android:background="@color/f8f8ff8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="34dip"
+                        android:layout_height="34dip"
+                        android:layout_marginRight="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/myfragment_guantou" />
+
+                    <TextView
+                        android:id="@+id/tv_mycan_gtdhzx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="罐头币兑换中心"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_mycan_smsgt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="什么是罐头币?"
+                    android:textColor="@color/a999999"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vw_mycan_dhzx"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/aDDDDDD" />
+
+            <com.haotang.pet.view.MListview
+                android:id="@+id/mlv_mycan_dhzx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/list_item_divider"
+                android:dividerHeight="0.5dip"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/ll_mycan_gtzqzn"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dip"
+                    android:background="@color/f8f8ff8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="34dip"
+                        android:layout_height="34dip"
+                        android:layout_marginRight="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/myfragment_guantou" />
+
+                    <TextView
+                        android:id="@+id/tv_mycan_gtzqzn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="罐头币赚取指南"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vw_mycan_zqzn"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/aDDDDDD" />
+
+            <com.haotang.pet.view.MListview
+                android:id="@+id/mlv_mycan_zqzn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/list_item_divider"
+                android:dividerHeight="0.5dip"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

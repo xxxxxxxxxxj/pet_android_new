@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/titlebar"/>
+    <com.haotang.pet.swipemenulistview.SwipeMenuListView
+        android:id="@+id/prl_Address_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none"
+        android:showDividers="none" />
+    <TextView
+        android:id="@+id/button_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:text="✚ 新增地址"
+        android:visibility="visible"/>
+</RelativeLayout>

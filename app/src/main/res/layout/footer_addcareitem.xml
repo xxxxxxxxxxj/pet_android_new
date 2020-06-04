@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/aF0F5F9"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="30dip"
+    android:paddingBottom="25dip">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="81.5dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_careitem_addpet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="添加宠物"
+        android:textColor="@color/a666666"
+        android:textSize="14sp" />
+</LinearLayout>

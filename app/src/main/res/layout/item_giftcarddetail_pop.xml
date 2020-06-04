@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_giftcard_item_price"
+        android:layout_width="88dp"
+        android:layout_marginBottom="15dp"
+        android:text="3000"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:background="@drawable/bg_gray_round_bbbbbb"
+        android:textSize="14sp"
+        android:layout_marginRight="15dp"
+        android:layout_height="28dp" />
+
+</RelativeLayout>

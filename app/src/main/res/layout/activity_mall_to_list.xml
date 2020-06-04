@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--title-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingRight="15dip"
+        android:background="@color/a3a3636">
+
+        <ImageView
+            android:id="@+id/img_left_title"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_back_orange_servicenew" />
+
+        <TextView
+            android:id="@+id/tv_mall_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout_right_show"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_order_mall"
+                android:layout_width="30dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dip">
+
+                <TextView
+                    android:id="@+id/textview_order_mall"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="3dip"
+                    android:background="@drawable/gwcnum_bg"
+                    android:gravity="center"
+                    android:text="99+"
+                    android:textColor="@color/white"
+                    android:textSize="7sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shopmall_order_selector" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_buy_car_mall"
+                android:layout_width="30dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/textview_buy_car"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="3dip"
+                    android:background="@drawable/gwcnum_bg"
+                    android:gravity="center"
+                    android:text="99+"
+                    android:textColor="@color/white"
+                    android:textSize="7sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shopmall_gwc_selector" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--品牌  产地 年龄-->
+    <com.haotang.pet.view.HorizontalListView
+        android:id="@+id/mallSearchTag"
+        android:layout_width="match_parent"
+        android:layout_height="34.5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="34.5dp"
+        android:background="@color/white"
+        app:tabSelectedTextColor="@color/aD1494F"
+        app:tabIndicatorColor="@color/aD1494F"
+        app:tabTextColor="@color/a333333"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="2dp"
+        app:tabBackground="@color/white"
+        app:tabTextAppearance="@style/mainTolistTablayout"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aDDDDDD"/>
+    <!--二级分类-->
+    <RelativeLayout
+        android:id="@+id/rl_second_class"
+        android:layout_width="match_parent"
+        android:layout_height="49dip">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/aDDDDDD"
+            android:layout_alignParentBottom="true"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyleview_mall_tag"
+            android:layout_width="match_parent"
+            android:layout_height="49dip"
+            android:background="@drawable/mall_tag_back_white"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <!--返现金额提示-->
+        <RelativeLayout
+            android:id="@+id/rl_cashback_tip"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_cashback_tip"
+                android:layout_height="34dp">
+                <TextView
+                    android:id="@+id/tv_cashback_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有20.5元的返现金额等待使用～"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_centerInParent="true"
+                    />
+                <ImageView
+                    android:id="@+id/iv_cashback_close"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_cashback_tipclose"
+                    android:layout_marginRight="18dp"
+                    />
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="63dp"
+                android:layout_height="57.5dp"
+                android:layout_marginLeft="22.5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/icon_cashback_redpocket"/>
+        </RelativeLayout>
+        <!--数据加载列表-->
+        <com.haotang.pet.pulltorefresh.PullToRefreshGridView
+            android:id="@+id/prl_mall_to_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_cashback_tip"
+            android:numColumns="2"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:showDividers="none"
+            android:background="@color/af8f8f8"/>
+
+        <!--点开对应品牌 适用对象这些东西的详细数据 隐藏点击显示-->
+        <LinearLayout
+            android:id="@+id/top_navigation_open_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <GridView
+                android:id="@+id/gridView_navigation_open_detail"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:numColumns="2"
+                android:background="@color/white"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@color/transparent"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/button_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/af8f8f8"
+                    android:textColor="@color/a666666"
+                    android:textSize="15sp"
+                    android:text="重置" />
+
+                <Button
+                    android:id="@+id/button_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_red_jianbian"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:text="确定" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_open_detail_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_navigation_open_detail"
+                android:background="#99000000"
+                android:orientation="vertical"
+                android:visibility="gone">
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_scroll_top"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/mall_scroll_top"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <include layout="@layout/activity_un_data_or_networkis_die"/>
+</LinearLayout>

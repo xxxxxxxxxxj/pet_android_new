@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_switchservice_item_bottomdia"
+        android:layout_width="match_parent"
+        android:layout_height="241dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pet_data_setback"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dip"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_switchservice_item_bottomdia_wc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="完成"
+                android:textColor="@color/a333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="可添加单项"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_switchservice_item_bottomdia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_switchservice_item_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_switchservice_item_bottomdia"
+        android:alpha="0.7"
+        android:background="@color/black" />
+</RelativeLayout>

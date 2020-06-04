@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_appoint_time_time"
+    android:layout_width="match_parent"
+    android:layout_height="34dip"
+    android:layout_marginRight="10dip"
+    android:layout_marginBottom="10dip"
+    android:background="@drawable/bg_ffbdb7_border"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_item_appoint_time_time_js"
+        android:layout_width="13.5dip"
+        android:layout_height="12dip"
+        android:layout_marginRight="5dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_time_car_unselect"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_appoint_time_time_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/aD0021B"
+        android:textSize="13sp" />
+
+</LinearLayout>

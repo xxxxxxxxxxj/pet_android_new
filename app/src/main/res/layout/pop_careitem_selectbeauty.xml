@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_addcare_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_addcare_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_white_topround_20"
+        android:paddingLeft="20dip"
+        android:paddingTop="20dip"
+        android:paddingRight="20dip">
+
+        <LinearLayout
+            android:id="@+id/ll_addcare_shopname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="30dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_addcare_shopname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_addcare_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_addcare_shopname"
+                android:text="TextView"
+                android:textColor="@color/a666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.haotang.pet.view.ShadowLayout
+            android:id="@+id/sl_addserivce_shop_sure"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dip"
+            app:hl_cornerRadius="16dip"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="@color/default_shadow_color"
+            app:hl_shadowLimit="10dp">
+
+            <Button
+                android:id="@+id/btn_addserivce_shop_sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_red_round16"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.haotang.pet.view.ShadowLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_addcare_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/sl_addserivce_shop_sure"
+            android:layout_below="@+id/ll_addcare_shopname" />
+    </RelativeLayout>
+</RelativeLayout>

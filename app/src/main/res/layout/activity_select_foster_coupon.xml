@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <LinearLayout
+        android:id="@+id/ll_selectfostercoupon_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/ctl_selectfostercoupon"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            tl:tl_divider_color="@color/transparent"
+            tl:tl_divider_padding="13dp"
+            tl:tl_divider_width="0dp"
+            tl:tl_iconVisible="false"
+            tl:tl_indicator_color="@color/aE2364A"
+            tl:tl_indicator_height="3dip"
+            tl:tl_indicator_margin_bottom="5dip"
+            tl:tl_indicator_width="75dip"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textBold="SELECT"
+            tl:tl_textSelectColor="@color/a333333"
+            tl:tl_textUnselectColor="@color/a333333"
+            tl:tl_textsize="14sp"
+            tl:tl_underline_color="@color/aEEEEEE"
+            tl:tl_underline_height="1dp" />
+    </LinearLayout>
+
+    <com.haotang.pet.view.ShadowLayout
+        android:id="@+id/sl_selectfostercoupon_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="64dip"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dip"
+        android:background="@color/transparent"
+        tl:hl_cornerRadius="20dip"
+        tl:hl_dx="0dp"
+        tl:hl_dy="0dp"
+        tl:hl_shadowColor="@color/default_shadow_color"
+        tl:hl_shadowLimit="10dp">
+
+        <Button
+            android:id="@+id/btn_selectfostercoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_red_round16"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </com.haotang.pet.view.ShadowLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_selectfostercoupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/sl_selectfostercoupon_bottom"
+        android:layout_below="@id/ll_selectfostercoupon_top"
+        android:paddingTop="10dip" />
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <include layout="@layout/titlebar"
+        android:id="@+id/cancel_title"
+        />
+        <RelativeLayout
+            android:layout_below="@+id/cancel_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_cancel_top"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:background="@drawable/bg_red_round_jianbian"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="22dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@drawable/bg_shopcancel_tipall"
+                >
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="66dp"-->
+                    <!--android:layout_marginRight="7dp"-->
+                    <!--android:layout_marginLeft="7dp"-->
+                    <!--android:paddingLeft="8dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--android:background="@drawable/icon_shopcancle_top"-->
+                    <!--/>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="75dp"
+                        android:id="@+id/rv_shopcancel_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_cancel_reson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择取消订单原因 (必选) ："
+                android:textStyle="bold"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                android:layout_below="@+id/rl_cancel_top"
+                android:layout_marginTop="83dp"
+                android:layout_marginLeft="15dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_reson_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_cancel_reson"
+                android:layout_marginTop="25dp"
+                />
+            <TextView
+                android:id="@+id/tv_cancel_commit"
+                android:layout_width="311dp"
+                android:layout_height="60dp"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/icon_commit_yellow"
+                android:paddingBottom="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8"
+    android:orientation="vertical"
+    tools:context="com.haotang.pet.SetUpPayPwdActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_paysetting_jymx"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_marginBottom="10dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_right1"
+            android:layout_width="22.5dip"
+            android:layout_height="22.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/change_account_show" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/img_right1"
+            android:gravity="center_vertical"
+            android:text="交易明细"
+            android:textColor="@color/a333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paysetting_xgzfmm"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_marginBottom="1dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_right2"
+            android:layout_width="22.5dip"
+            android:layout_height="22.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/change_account_show" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/img_right2"
+            android:gravity="center_vertical"
+            android:text="修改支付密码"
+            android:textColor="@color/a333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paysetting_wjzfmm"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_marginBottom="15dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_right3"
+            android:layout_width="22.5dip"
+            android:layout_height="22.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/change_account_show" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/img_right3"
+            android:gravity="center_vertical"
+            android:text="忘记支付密码"
+            android:textColor="@color/a333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paysetting_zwzf"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_marginBottom="5dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_paysetting_zwzf"
+            android:layout_width="68dp"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/noty_yes" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/iv_paysetting_zwzf"
+            android:gravity="center_vertical"
+            android:text="指纹支付"
+            android:textColor="@color/a333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_paysetting_zwzf_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="开启后，可通过验证指纹快速支付"
+        android:textColor="@color/a999999"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_paysetting_bzzx"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_marginBottom="15dip"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_right5"
+            android:layout_width="22.5dip"
+            android:layout_height="22.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/change_account_show" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="49dip"
+            android:layout_toLeftOf="@id/img_right5"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="帮助中心"
+            android:textColor="@color/a333333"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

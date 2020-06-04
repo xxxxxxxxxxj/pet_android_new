@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_left_title"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_back"
+            android:layout_centerVertical="true"/>
+
+        <com.haotang.pet.view.ClearEditText
+            android:id="@+id/editText_search_write"
+            android:layout_width="match_parent"
+            android:layout_height="36dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/layout_right_show"
+            android:layout_toRightOf="@+id/img_left_title"
+            android:background="@drawable/mall_search_back"
+            android:drawableLeft="@drawable/search_bar_icon_small"
+            android:drawableRight="@drawable/mall_search_close"
+            android:drawablePadding="10dip"
+            android:ems="10"
+            android:hint="搜索"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dp"
+            android:textColor="@color/a333333"
+            android:textCursorDrawable="@drawable/editshow"
+            android:textSize="15.0sp"></com.haotang.pet.view.ClearEditText>
+
+        <LinearLayout
+            android:id="@+id/layout_right_show"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_order_mall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/mall_ordericon" />
+                <TextView
+                    android:id="@+id/textview_order_mall"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textSize="8sp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_red_circle"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_buy_car_mall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/mall_buy_car" />
+                <TextView
+                    android:id="@+id/textview_buy_car"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textSize="8sp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_red_circle"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

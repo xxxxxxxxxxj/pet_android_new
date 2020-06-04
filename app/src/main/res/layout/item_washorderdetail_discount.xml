@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dip">
+
+    <TextView
+        android:id="@+id/tv_item_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/aD0021B"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@id/tv_item_discount_price"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginRight="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/reduce" />
+
+        <TextView
+            android:id="@+id/tv_item_discount_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/a333333"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

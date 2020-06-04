@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_outside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="300dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_newuser_top" />
+
+        <ImageView
+            android:id="@+id/iv_newuser_libao"
+            android:layout_width="290dp"
+            android:layout_height="235dp"
+            android:layout_marginTop="40dip"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_newuser_middle" />
+
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="300dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_newuser_bottom" />
+
+        <ImageView
+            android:id="@+id/iv_newuser_lq"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dip"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_newuser_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_close_gary" />
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BalanceCareUseDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/v_bar">
+
+        <ImageView
+            android:id="@+id/iv_balancecard_bg"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_balancecard_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/white_back_top" />
+
+        <TextView
+            android:id="@+id/tv_balancecard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_balancecard_back"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="余额卡"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_balancecard_desc"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_below="@+id/iv_balancecard_back"
+            android:layout_marginLeft="3.5dp"
+            android:layout_marginTop="21dp"
+            android:layout_toRightOf="@+id/tv_balancecard"
+            android:src="@drawable/icon_notic_white" />
+
+        <TextView
+            android:id="@+id/tv_balancecard_amounttip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_balancecard"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="47.5dp"
+            android:text="余额:"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_balancecard_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_balancecard"
+            android:layout_alignBaseline="@+id/tv_balancecard_amounttip"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_balancecard_amounttip"
+            android:text="¥"
+            android:textColor="#ffffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_balancecard_totalamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_balancecard_amounttip"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv_balancecard_rmb"
+            android:textColor="#ffffffff"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_code_recharge"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/tv_balancecard"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3.5dp"
+            android:background="@drawable/bg_cardright_common">
+
+            <TextView
+                android:id="@+id/tv_recharge_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="兑换码充值"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_recharge_tip"
+                android:src="@drawable/icon_white_toright" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/rl_code_recharge"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_cardright_common">
+
+            <TextView
+                android:id="@+id/tv_balancecard_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_balancecard_usetop"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="已使用"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_balancecard_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#339FA7B9" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/ll_order_default"
+                layout="@layout/recycler_emptyview"
+                android:visibility="gone" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_balancecard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_balancecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

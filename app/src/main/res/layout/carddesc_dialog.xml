@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="270dip"
+        android:layout_height="360dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_round_white_12">
+
+        <TextView
+            android:id="@+id/tv_carddesc_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="63dip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="15dip"
+            android:background="@drawable/bg_card_top"
+            android:text=""
+            android:textColor="@color/a333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_carddesc_dialog_qr"
+            android:layout_width="140dip"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/bg_red_jianbian_icon1"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:layout_above="@+id/tv_carddesc_dialog_qr"
+            android:layout_below="@+id/tv_carddesc_dialog_title"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tv_carddesc_dialog_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

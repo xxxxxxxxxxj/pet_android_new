@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_outside"
+    android:layout_width="match_parent"
+    android:layout_height="137dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_pet_icon"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/icon_default" />
+
+                <LinearLayout
+                    android:id="@+id/layout_name_kind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_pet_icon"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/layout_left_pet_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/layout_pet_right"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/textview_dognickname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textSize="14sp"
+                                android:textColor="@color/a666666" />
+
+                            <ImageView
+                                android:id="@+id/img_sex"
+                                android:layout_width="11.5dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/pet_man" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_pet_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TA的百科 >"
+                                android:textColor="@color/a666666" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_dog_cat"
+                            android:layout_width="18dp"
+                            android:layout_height="16dp"
+                            android:background="@drawable/pet_kind" />
+
+                        <TextView
+                            android:id="@+id/textview_kindname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=" "
+                            android:textSize="12sp"
+                            android:textColor="@color/a666666" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_pet_age"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/pet_age" />
+
+                            <TextView
+                                android:id="@+id/textview_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="生日待完善"
+                                android:textSize="12sp"
+                                android:textColor="@color/a666666" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_myfragment_mypet_certi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/aEEEEEE" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/pet_certi" />
+
+                            <TextView
+                                android:id="@+id/textview_isCerti"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text=" "
+                                android:textSize="12sp"
+                                android:textColor="@color/a666666" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_out"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#FFF1F1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textview_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/textview_right_go_look"
+                    android:text="   "
+                    android:textColor="@color/a666666"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textview_right_go_look"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="去看看>>"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/textview_content_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textview_right_go_look"
+                        android:text=" "
+                        android:textColor="@color/a666666" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

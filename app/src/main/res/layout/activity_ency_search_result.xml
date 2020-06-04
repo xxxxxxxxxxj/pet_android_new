@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pla="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.haotang.pet.view.ClearEditText
+            android:id="@+id/input_word_search"
+            android:layout_width="0dp"
+            android:layout_height="36dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageView_service_address_back"
+            android:layout_weight="1"
+            android:background="@drawable/mall_search_back"
+            android:drawableLeft="@drawable/search_bar_icon_small"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/mall_search_close"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请输入感兴趣的内容"
+            android:maxLength="100"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/a333333"
+            android:textCursorDrawable="@drawable/editshow"
+            android:textSize="15.0sp"></com.haotang.pet.view.ClearEditText>
+
+        <TextView
+            android:id="@+id/textview_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="返回" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/ll_empty_view"
+            layout="@layout/recycler_emptyview"
+            android:visibility="gone" />
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/mrl_encyclopedias_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:isLoadMore="true"
+            app:overlay="true"
+            app:progress_colors="@array/material_colors"
+            app:progress_size_type="normal"
+            app:wave_color="#90ffffff"
+            app:wave_height_type="normal"
+            app:wave_show="true">
+
+            <com.huewu.pla.lib.MultiColumnListView
+                android:id="@+id/mclv_encyclopedias_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/af8f8f8"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                pla:plaColumnNumber="2"
+                pla:plaLandscapeColumnNumber="2" />
+        </com.cjj.MaterialRefreshLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_fosterinfo_topall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/tv_foster_shopdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                expandableTextView:animDuration="200"
+                expandableTextView:collapseDrawable="@drawable/icon_text_close"
+                expandableTextView:expandDrawable="@drawable/icon_text_open"
+                expandableTextView:maxCollapsedLines="3">
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="10dp"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_foster_shopname" />
+
+                <TextView
+                    android:id="@+id/tv_foster_shoploc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_foster_opentime" />
+
+                <TextView
+                    android:id="@+id/tv_foster_opentime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="20dip"
+                android:background="@drawable/bg_f6f8fa_round12"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_fosterhome_call"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_fosterhome_call"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginRight="10dip"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_foster_call" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系门店"
+                        android:textColor="@color/a666666"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fosterhome_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_fosterhome_navigation"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginRight="10dip"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_foster_navigation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="导航到店"
+                        android:textColor="#ff666666"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_f6f8fa_topleft_round"
+            android:orientation="vertical"
+            android:paddingTop="20dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:text="寄养宠物"
+                android:textColor="@color/a333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip">
+
+                <com.haotang.pet.view.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@color/white"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_dx="0dp"
+                    app:hl_dy="0dp"
+                    app:hl_shadowColor="@color/default_shadow_color"
+                    app:hl_shadowLimit="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_fosterhome_addpet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_fosterhome_addpet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dip"
+                                android:ellipsize="end"
+                                android:maxEms="4"
+                                android:maxLines="1"
+                                android:text="添加宠物"
+                                android:textColor="@color/a333333"
+                                android:textSize="17sp" />
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_foster_choosepet" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll_fosterhome_intip"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_fosterhome_intip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3.5dip"
+                                    android:textColor="@color/a666666"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_fosterhome_intime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/a333333"
+                                    android:textSize="19sp" />
+
+                                <View
+                                    android:layout_width="69dip"
+                                    android:layout_height="0.5dip"
+                                    android:background="@color/a333333" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_fosterhome_num"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:layout_width="37dip"
+                                    android:layout_height="37dip"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/icon_foster_num" />
+
+                                <TextView
+                                    android:id="@+id/tv_fosterhome_totalday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="TextView"
+                                    android:textColor="@color/a333333"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_fosterhome_leavetip"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_fosterhome_leavetip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3.5dip"
+                                    android:textColor="@color/a666666"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_fosterhome_leavetime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/a333333"
+                                    android:textSize="19sp" />
+
+                                <View
+                                    android:layout_width="69dip"
+                                    android:layout_height="0.5dip"
+                                    android:background="@color/a333333" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.haotang.pet.view.ShadowLayout>
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/bg_foster_addpet">
+
+                    <com.haotang.pet.view.NiceImageView
+                        android:id="@+id/iv_fosterhome_addpet"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_foster_addpet"
+                        app:corner_radius="24dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="15dip"
+                android:text="选择房间"
+                android:textColor="@color/a333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fosterhome_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="15dip">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/ctl_fosterhome"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/ll_fosterinfo_topall"
+        android:background="@color/white"
+        app:tl_divider_color="@color/transparent"
+        app:tl_divider_padding="13dp"
+        app:tl_divider_width="0dp"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="@color/aE2364A"
+        app:tl_indicator_height="3dip"
+        app:tl_indicator_margin_bottom="5dip"
+        app:tl_indicator_width="62.5dp"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_space_equal="true"
+        app:tl_textBold="SELECT"
+        app:tl_textSelectColor="@color/a333333"
+        app:tl_textUnselectColor="@color/a333333"
+        app:tl_textsize="14sp"
+        app:tl_underline_color="@color/aEEEEEE"
+        app:tl_underline_height="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ctl_fosterhome">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fosterhome_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>

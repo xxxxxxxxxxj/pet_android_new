@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_giftdetail_freename"
+        android:layout_width="wrap_content"
+        android:textColor="#FF666666"
+        android:textSize="12sp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@+id/tv_item_giftdetail_freename"
+        android:id="@+id/tv_item_giftdetail_num"
+        android:layout_width="wrap_content"
+        android:textColor="#FFBB996C"
+        android:textSize="12sp"
+        android:layout_marginLeft="2dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+</RelativeLayout>

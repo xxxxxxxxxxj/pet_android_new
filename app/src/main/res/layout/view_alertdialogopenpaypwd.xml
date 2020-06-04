@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="bottom|center_horizontal"
+    android:paddingBottom="106dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="315dip"
+        android:layout_height="123.5dip"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/bg_openpwd_pop"
+        android:gravity="center"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingBottom="20dip"
+        android:text="你尚未开启宠物家付款功能，开启后向宠物家门店出示二维码，支付更便捷"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="345dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:hl_cornerRadius="16dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="@color/default_shadow_color"
+        app:hl_shadowLimit="15dp">
+
+        <TextView
+            android:id="@+id/tv_openpwddialog_open"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:background="@drawable/bg_ff3a1e_round16"
+            android:gravity="center"
+            android:text="开启支付"
+            android:textColor="@color/white"
+            android:textSize="17sp">
+
+        </TextView>
+    </com.haotang.pet.view.ShadowLayout>
+
+    <ImageView
+        android:id="@+id/iv_openpwddialog_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_close_gary" />
+</LinearLayout>

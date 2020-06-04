@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_giftcard_sure_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_orderdetail_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_giftcard_sure_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="165dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_orderdetail_couponList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_icon_gray_lr"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingTop="25dip"
+                        android:paddingRight="@dimen/dp_10"
+                        android:paddingBottom="10dip">
+
+                        <TextView
+                            android:id="@+id/tv_giftcard_give"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="8.5dp"
+                            android:text="赠送"
+                            android:textColor="#BB996C"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_giftcard_givelist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="116dp"
+                            android:layout_toRightOf="@+id/tv_giftcard_give" />
+                    </RelativeLayout>
+                    <!--绑卡布局-->
+                    <RelativeLayout
+                        android:id="@+id/rl_bind_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_orderdetail_couponList"
+                        android:background="@drawable/bg_icon_bottomtop_lr"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_bindcard_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="21dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="28.5dp"
+                            android:layout_marginRight="15dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="#FF333333"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_cardnum_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/tv_bindcard_name"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center_vertical"
+                            android:text="卡号："
+                            android:textColor="#FF333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cardnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/tv_bindcard_name"
+                            android:layout_marginTop="11dp"
+                            android:layout_toRightOf="@+id/tv_cardnum_tip"
+                            android:gravity="center"
+                            android:textColor="#FF333333"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_cardpwd_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/tv_cardnum_tip"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="密码："
+                            android:textColor="#FF151515"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cardpwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_below="@+id/tv_cardnum"
+                            android:layout_toRightOf="@+id/tv_cardpwd_tip"
+                            android:gravity="center"
+                            android:textColor="#FF151515"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_copy_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15.5dp"
+                            android:layout_below="@+id/tv_cardnum"
+                            android:layout_marginLeft="8.5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/tv_cardpwd"
+                            android:background="@drawable/bg_boder_gray_radius"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="复制"
+                            android:textColor="#979797"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_giftcard_bind"
+                            android:layout_width="210dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/tv_cardpwd"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/bg_red_jianbian_icon"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:text="立即绑定"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--头部布局-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:background="@drawable/bg_red_jianbian_updown">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="20dp">
+
+                            <ImageView
+                                android:id="@+id/placeholder"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/tv_cardorder_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="22.5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/placeholder"
+                                android:text="已完成"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_backdetail_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="22.5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="15dp"
+                            android:text="查看退款进度  >"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_giftcard_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginLeft="3.5dip"
+                        android:layout_marginTop="50.5dp"
+                        android:layout_marginRight="3.5dip"
+                        android:background="@drawable/bg_icon_suretop"
+                        android:padding="20dp">
+                        <!--纪念卡图片-->
+                        <ImageView
+                            android:id="@+id/iv_sure_order"
+                            android:layout_width="143dp"
+                            android:layout_height="85dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="fitXY" />
+                        <!--纪念卡名称-->
+                        <TextView
+                            android:id="@+id/tv_giftcard_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="21dp"
+                            android:layout_marginLeft="9.5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="4.5dp"
+                            android:layout_toRightOf="@+id/iv_sure_order"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="#333333"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_giftcard_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_giftcard_name"
+                            android:layout_marginLeft="9.5dp"
+                            android:layout_toRightOf="@+id/iv_sure_order"
+                            android:orientation="vertical" />
+                        <!--可用范围-->
+                        <TextView
+                            android:id="@+id/tv_giftcard_usablerange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/ll_giftcard_discount"
+                            android:layout_marginLeft="9.5dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_toRightOf="@+id/iv_sure_order"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="限六家门店可用"
+                            android:textColor="#BB996C"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#FFF8F8F8" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/af1f1f1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/placeholder2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/bg_order_text"
+                    android:gravity="center"
+                    android:text="礼"
+                    android:textColor="@color/aff3a1e"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/placeholder2"
+                    android:text="E卡面值"
+                    android:textColor="#FF666666"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_card_facevaule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14.5dp"
+                    android:textColor="#FF666666"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/af1f1f1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_giftcard_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_back_truetip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="11.5dp"
+                    android:text="实际支付"
+                    android:textColor="#FF333333"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_giftcard_back_payvaule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="11.5dp"
+                    android:layout_marginRight="14.5dp"
+                    android:text="¥3000.00"
+                    android:textColor="#FFE50000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_back_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_below="@+id/tv_back_truetip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="退款金额"
+                    android:textColor="#FF666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_giftcard_backvaule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/tv_giftcard_back_payvaule"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="14.5dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="¥3000.00"
+                    android:textColor="#FF666666"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_giftcard_noback"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14.5dp"
+                    android:text="实际支付"
+                    android:textColor="#FF333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_giftcard_truevaule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14.5dp"
+                    android:textColor="#FFE50000"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/af1f1f1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#FFF8F8F8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:layout_gravity="center"
+                        android:text="订单编号："
+                        android:textColor="#FF666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_giftcard_ordernum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:gravity="center"
+                        android:textColor="#FF666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_copy_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15.5dp"
+                        android:layout_below="@+id/tv_cardnum"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8.5dp"
+                        android:layout_toRightOf="@+id/tv_cardpwd"
+                        android:background="@drawable/bg_boder_gray_radius"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="复制"
+                        android:textColor="#979797"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:layout_gravity="center"
+                        android:text="支付时间："
+                        android:textColor="#FF666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_card_paytime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:gravity="center"
+                        android:textColor="#FF666666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:layout_gravity="center"
+                        android:text="支付方式："
+                        android:textColor="#FF666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_card_paytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:gravity="center"
+                        android:textColor="#FF666666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:layout_gravity="center"
+                        android:text="售后电话："
+                        android:textColor="#FF666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_card_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.5dp"
+                        android:gravity="center"
+                        android:textColor="#FF666666" />
+
+                    <ImageView
+                        android:id="@+id/iv_orderdetail_call"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_phone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_cardorder_nonet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="106.5dip"
+            android:layout_height="96dip"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/shopmallorder_nonet_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="30dip"
+            android:text="啊哦~网络竟然崩溃了 刷新看看"
+            android:textColor="@color/a999999"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_cardorder_nonet"
+            android:layout_width="128.5dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_shopmallorder_nodata_selector"
+            android:gravity="center"
+            android:text="刷新"
+            android:textColor="@color/aBB996C"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

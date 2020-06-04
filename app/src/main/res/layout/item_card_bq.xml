@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_card_bq"
+        android:layout_width="wrap_content"
+        android:layout_height="17dip"
+        android:background="@drawable/bg_round_f8f1e8"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="TextView"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/aBB996C"
+        android:layout_marginLeft="9dp"
+        android:textSize="10sp" />
+
+</LinearLayout>

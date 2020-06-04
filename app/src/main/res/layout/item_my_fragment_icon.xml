@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="#4C4949"
+    android:id="@+id/layout_outside_img">
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+       <!-- <com.haotang.pet.view.CircleImageViewMy
+            android:id="@+id/img_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_default"
+            app:border_width="0dp"/>-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_default"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:padding="0dp"/>
+        <ImageView
+            android:id="@+id/img_vip"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/copper_level_icon"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

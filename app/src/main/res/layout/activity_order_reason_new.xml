@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/show_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_reasonpop_bottom"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/rl_reasonpop_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="391dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_topround_20">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="取消订单："
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/close_pop_activity" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView_show_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sl_addserivce_shop_sure"
+            android:layout_below="@+id/top_layout"
+            android:background="@color/white"
+            android:divider="@null"
+            android:listSelector="@color/white"
+            android:scrollbars="vertical"
+            android:visibility="visible"></ListView>
+
+        <com.haotang.pet.view.ShadowLayout
+            android:id="@+id/sl_addserivce_shop_sure"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:layout_alignParentBottom="true"
+            app:hl_cornerRadius="16dip"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="@color/default_shadow_color"
+            app:hl_shadowLimit="10dp">
+
+            <Button
+                android:id="@+id/button_push"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_red_round16"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.haotang.pet.view.ShadowLayout>
+    </RelativeLayout>
+</RelativeLayout>

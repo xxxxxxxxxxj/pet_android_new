@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_sharedialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@color/black"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_topround_25"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_sharedialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/alertdialog_selector"
+            android:text="取消"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view_sharedialog_1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_above="@id/btn_sharedialog_cancel"
+            android:background="#DFE0E2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dip"
+            android:layout_above="@id/view_sharedialog_1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_sharedialog_wxfriend"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_weight="1"
+                android:background="@drawable/alertdialog_selector"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/icon_share_towx"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="分享给微信好友"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sharedialog_wxpyq"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_weight="1"
+                android:background="@drawable/alertdialog_selector"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/icon_share_tofridend"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="分享微信朋友圈"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sharedialog_qqfriend"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/alertdialog_selector"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="49dip"
+                    android:layout_height="49dip"
+                    android:background="@drawable/umeng_socialize_qq"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:text="QQ好友"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sharedialog_sina"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/alertdialog_selector"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="49dip"
+                    android:layout_height="49dip"
+                    android:background="@drawable/umeng_socialize_sina"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:text="微博"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

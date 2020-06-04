@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:hl_shadowLimit="@dimen/dp15"
+    app:hl_topShow="false"
+    app:hl_cornerRadius="10dp"
+    app:hl_shadowColor="#4c626262"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="44dip"
+                android:layout_height="44dip"
+                android:layout_marginRight="10dip">
+
+                <ImageView
+                    android:id="@+id/iv_item_comment_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/user_icon_unnet_circle"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/iv_item_comment_vip"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_icon_unnet_circle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dip">
+
+                <TextView
+                    android:id="@+id/tv_item_comment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="TextView"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/tv_item_comment_time"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip">
+
+                    <TextView
+                        android:id="@+id/tv_item_comment_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+                    <com.haotang.pet.materialratingbar.MaterialRatingBar
+                        android:id="@+id/mrb_item_comment_name"
+                        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:maxHeight="12dip"
+                        android:minHeight="12dip"
+                        android:rating="1"
+                        android:stepSize="1"
+                        app:mrb_progressTint="@color/affe275"
+                        app:mrb_secondaryProgressTint="@color/affe275" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_comment_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:text="TextView"
+            android:textColor="@color/a333333"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_comment_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_item_comment_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:text="TextView"
+            android:textColor="@color/aBB996C"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_item_comment_fwtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="TextView"
+                android:textColor="@color/a999999"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@id/tv_item_comment_fwtime"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_item_comment_fwname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="TextView"
+                        android:textColor="@color/a999999"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_item_comment_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="单项"
+                            android:textColor="@color/a999999"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_item_comment_fz"
+                            android:layout_width="21dip"
+                            android:layout_height="17dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_wfz" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_comment_dx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/white" />
+        <RelativeLayout
+            android:id="@+id/rv_beautician_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_beautician_comment"
+            android:layout_marginTop="@dimen/dp_10">
+            <ImageView
+                android:id="@+id/iv_beautician_head"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/tv_beautician_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/iv_beautician_head"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginLeft="6dp"
+                />
+            <TextView
+                android:id="@+id/tv_beautician_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:text="感谢您对宠物家服务的认可，期待下一次为您服务。如需帮助请拨打4000300011"
+                android:layout_below="@+id/tv_beautician_name"/>
+        </RelativeLayout>
+    </LinearLayout>
+</com.haotang.pet.view.ShadowLayout>

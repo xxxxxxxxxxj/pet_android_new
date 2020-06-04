@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af7f7f7"
+    android:orientation="vertical"
+    tools:context="com.haotang.pet.SetUpPayPwdActivity">
+    <LinearLayout
+        android:id="@+id/animation_root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ib_setuppaypwd_back"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="15dip"
+                android:layout_marginBottom="45dip"
+                android:src="@drawable/btn_back_black_servicenew" />
+
+            <TextView
+                android:id="@+id/tv_setuppaypwd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginBottom="10dip"
+                android:textStyle="bold"
+                android:text="设置支付密码"
+                android:textColor="@color/a333333"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_setuppaypwd_miaoshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginBottom="50dip"
+                android:text="请设置支付密码，用于支付验证"
+                android:textColor="@color/a999999"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_setuppaypwd_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="15dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ebebeb_round" />
+                </LinearLayout>
+
+                <com.haotang.pet.codeview.CodeView
+                    android:id="@+id/cv_setuppaypwd_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    app:borderColor="@color/transparent"
+                    app:borderWidth="0px"
+                    app:codeColor="@color/black"
+                    app:dividerColor="@color/transparent"
+                    app:dividerWidth="12dip"
+                    app:pointRadius="5dip" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setuppaypwd_oldpwddesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="15dip">
+
+                <TextView
+                    android:id="@+id/tv_setuppaypwd_oldpwd_wjmm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="忘记密码?"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_setuppaypwd_oldpwderror"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码输入有误"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/aD0021B"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sl_setuppaypwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                app:hl_cornerRadius="16dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowColor="@color/default_shadow_color"
+                app:hl_shadowLimit="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dip"
+                    android:background="@drawable/bg_ff3a1e_round16"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="16sp">
+
+                </TextView>
+            </com.haotang.pet.view.ShadowLayout>
+        </LinearLayout>
+
+        <com.haotang.pet.codeview.KeyboardView
+            android:id="@+id/kbv_setuppaypwd"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+    </LinearLayout>
+
+</LinearLayout>

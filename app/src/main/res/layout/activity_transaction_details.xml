@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:background="#F8F1E8"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:singleLine="true"
+        android:text="即将到账罐头币不显示在收支明细中"
+        android:textColor="@color/aBB996C"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_cantransaction_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_mycan_gticon"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/mycan_guantou_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:text="暂时还没有交易记录哦~快去下单赚取罐头币吧"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.haotang.pet.pulltorefresh.PullToRefreshListView
+            android:id="@+id/prl_cantransaction_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_item_divider"
+            android:dividerHeight="0.5dip"
+            android:listSelector="@drawable/mlistview_selector"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+
+</LinearLayout>

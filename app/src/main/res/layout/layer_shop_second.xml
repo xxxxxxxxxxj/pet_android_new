@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="66dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/shop_guide_arror_2"/>
+    <TextView
+        android:text="@string/shop_contact_informaton"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="@string/shop_contact_information_hint"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

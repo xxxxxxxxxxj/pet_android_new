@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/change_order_bj"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
+
+    <TextView
+        android:id="@+id/tv_pop_washorder_xgdd"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="修改订单"
+        android:textColor="@color/a666666"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_pop_washorder_sqtk"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="申请退款"
+        android:textColor="@color/a666666"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_pop_washorder_lxkf"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="联系客服"
+        android:textColor="@color/a666666"
+        android:textSize="13sp" />
+</LinearLayout>

@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <include
+        android:id="@+id/rl_washorderconfirm_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_washorderconfirm_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_washorderconfirm_submit"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_jianbian"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去付款"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_washorderconfirm_fxprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可返现¥0"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/ll_washorderconfirm_submit"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="需付款 : "
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_washorderconfirm_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_washorderconfirm_bottom"
+        android:layout_below="@id/rl_washorderconfirm_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:orientation="vertical">
+
+                <com.haotang.pet.view.MListview
+                    android:id="@+id/mlv_washorderconfirm_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="10dip" />
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_pet_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dip"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/aEEEEEE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_pet_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dip"
+                            android:text="展开更多"
+                            android:textColor="@color/a666666"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_washorderconfirm_pet_more"
+                            android:layout_width="12dip"
+                            android:layout_height="12dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_appoint_pet_zk" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="服务信息"
+                    android:textColor="@color/a333333"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_washorderconfirm_mrsicon"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:layout_marginRight="10dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_icon_unnet_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="美容师 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_mrsname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip">
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_fwmd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="服务门店 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_washorderconfirm_call"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/icon_phone"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_shop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@id/iv_washorderconfirm_call"
+                                android:layout_toRightOf="@id/tv_washorderconfirm_fwmd"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="服务方式 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_fwfs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_js"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/aBB996C"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="服务时间 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <ImageView
+                            android:id="@+id/iv_washorderconfirm_dzxx"
+                            android:layout_width="7dip"
+                            android:layout_height="11.5dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_right_more" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_dzxx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="地址信息"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/iv_washorderconfirm_dzxx"
+                            android:layout_toRightOf="@id/tv_washorderconfirm_dzxx"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_bz"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_fwbz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="服务备注"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_washorderconfirm_fwbz"
+                            android:layout_width="7dip"
+                            android:layout_height="11.5dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_right_more" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_bz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/iv_washorderconfirm_fwbz"
+                            android:layout_toRightOf="@id/tv_washorderconfirm_fwbz"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:hint="给宠物家留个言吧"
+                            android:singleLine="true"
+                            android:textColor="@color/a666666"
+                            android:textColorHint="@color/aBBBBBB"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_fwf"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="21.5dip">
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_fwf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:hint=""
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_fwf_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_washorderconfirm_fwf"
+                            android:text="上门服务费"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_smjs"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="21.5dip">
+
+                        <TextView
+                            android:id="@+id/tv_washorderconfirm_smjs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:hint=""
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_washorderconfirm_smjs"
+                            android:text="上门接送"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_washorderconfirm_card_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="选择E卡"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/ll_washorderconfirm_card_more"
+                            android:text="E卡"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_yhq"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_washorderconfirm_yhq_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_yhq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:gravity="center_vertical|right"
+                                android:text="选择优惠券"
+                                android:textColor="@color/a666666"
+                                android:textColorHint="@color/aBBBBBB"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/ll_washorderconfirm_yhq_more"
+                            android:text="优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderconfirm_smyhq"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_washorderconfirm_smyhq_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_washorderconfirm_smyhq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:gravity="center_vertical|right"
+                                android:text="选择上门优惠券"
+                                android:textColor="@color/a666666"
+                                android:textColorHint="@color/aBBBBBB"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="7dip"
+                                android:layout_height="11.5dip"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_right_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/ll_washorderconfirm_smyhq_more"
+                            android:text="上门服务费优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="21.5dip"
+                android:paddingBottom="15dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_totalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderconfirm_totalprice"
+                        android:text="订单总金额"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderconfirm_carddiscountprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_carddiscountprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_washorderconfirm_carddiscountprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/reduce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="E卡折扣优惠"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderconfirm_couponprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_couponprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_washorderconfirm_couponprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/reduce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderconfirm_smcouponprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_smcouponprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_washorderconfirm_smcouponprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/reduce" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上门服务费优惠券"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderconfirm_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_cardprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderconfirm_cardname_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderconfirm_cardprice"
+                        android:text="支付"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginBottom="15dip"
+                android:text="*取消订单需要提前24小时，24小时以内取消需要扣除10%的续费"
+                android:textColor="@color/aBB996C"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_washorderconfirm_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginBottom="15dip"
+                android:textColor="@color/a666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

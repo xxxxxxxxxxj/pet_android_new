@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rl_refund_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_refundschdule_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_refundschdule_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_refundschdule_title"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/rl_refund_all"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#FFF8F8F8"/>
+</RelativeLayout>

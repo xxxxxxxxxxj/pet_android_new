@@ -1,0 +1,328 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bggray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--支付设置-->
+            <include
+                android:id="@+id/zfsz"
+                layout="@layout/setup_item_layout" />
+            <!--常用地址-->
+            <include
+                android:id="@+id/address"
+                layout="@layout/setup_item_layout" />
+            <!--邀请有礼-->
+            <include
+                android:id="@+id/yqyl"
+                android:visibility="gone"
+                layout="@layout/setup_item_layout" />
+            <!--办理犬证-->
+            <include
+                android:id="@+id/dogcard"
+                android:visibility="gone"
+                layout="@layout/setup_item_layout" />
+            <!--我的评价-->
+            <include
+                android:id="@+id/myeva"
+                android:visibility="gone"
+                layout="@layout/setup_item_layout" />
+            <!--寄养直播-->
+            <include
+                android:id="@+id/foster_live"
+                android:visibility="gone"
+                layout="@layout/setup_item_layout" />
+            <!--我的收藏-->
+            <include
+                android:id="@+id/my_collect"
+                android:visibility="gone"
+                layout="@layout/setup_item_layout" />
+            <!--投诉-->
+            <include
+                android:id="@+id/feed_back"
+                layout="@layout/setup_item_layout" />
+
+            <!--清理缓存-->
+            <!--<include
+                android:id="@+id/clearCache"
+                layout="@layout/setup_item_layout"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_moreabout_cleandata"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@drawable/rl_moreabout_cleardata_selector">
+
+                    <ImageView
+                        android:id="@+id/imageView_more_jiantou_cleandata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/change_account_show" />
+
+                    <TextView
+                        android:id="@+id/tv_moreabout_cleandata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/imageView_more_jiantou_cleandata"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="清除缓存"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/bggray" />
+            </LinearLayout>
+            <!--原寄养直播-->
+            <RelativeLayout
+                android:id="@+id/rl_moreabout_jyzb"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView_more_jiantou_jyzb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/change_account_show" />
+
+                <TextView
+                    android:id="@+id/tv_moreabout_jyzb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/imageView_more_jiantou_jyzb"
+                    android:text="正在直播"
+                    android:textColor="@color/aD0021B"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:text="寄养直播"
+                    android:textColor="@color/a333333"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/aEEEEEE" />
+            <!--    原清理缓存
+                <RelativeLayout
+                    android:id="@+id/rl_moreabout_cleandata"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rl_moreabout_cleardata_selector">
+
+                    <ImageView
+                        android:id="@+id/imageView_more_jiantou_cleandata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/change_account_show" />
+
+                    <TextView
+                        android:id="@+id/tv_moreabout_cleandata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/imageView_more_jiantou_cleandata"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:text="清除缓存"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView_noty_img"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/noty_yes" />
+
+                    <TextView
+                        android:id="@+id/textView_more_accept_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="允许接收通知"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/aEEEEEE" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_update_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp">
+
+                    <TextView
+                        android:id="@+id/textView_more_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="检查更新版本"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/change_account_show" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/aEEEEEE" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp">
+
+                    <TextView
+                        android:id="@+id/textView_more_about_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="关于"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView_more_jiantou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textView_more_about_other"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/change_account_show" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/aEEEEEE"
+                    android:visibility="visible" />
+                <!-- android:layout_marginBottom="5dp" -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_login_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/button_login_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退出登录"
+                        android:textColor="@color/a333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

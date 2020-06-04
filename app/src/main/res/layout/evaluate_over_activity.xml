@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/logo"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/textview_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8dp"
+                    android:text="感谢您的认可!"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textview_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我们会更好的为您服务~"
+                    android:textColor="@color/a333333"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_get_dummy_nums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已获得5个罐头币"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textview_go_look"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="点击查看>"
+                        android:textColor="@color/aBB996C"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFEEEEEE" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_gratuity"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
+
+                    <ImageView
+                        android:id="@+id/iv_beautician_head"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_beautician_is"
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/iv_beautician_head"
+                        android:gravity="center"
+                        android:text="美容师"
+                        android:textColor="#FF333333"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_beautician_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@+id/tv_beautician_is"
+                        android:gravity="center"
+                        android:text="程双"
+                        android:textColor="#FF333333"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gratuity_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_below="@+id/tv_beautician_is"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/iv_beautician_head"
+                        android:gravity="center"
+                        android:text="觉得美容师很棒，加个鸡腿吧！"
+                        android:textColor="#FF666666"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gratuity"
+                        android:layout_width="94dp"
+                        android:layout_height="29dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/bg_red_jianbian_icon"
+                        android:gravity="center"
+                        android:text="打赏美容师"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:focusable="false"
+                    android:src="@drawable/recommed_img" />
+
+                <com.haotang.pet.view.MyGridView
+                    android:id="@+id/mygridview_shows"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="2">
+
+                </com.haotang.pet.view.MyGridView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rl_giftcard_list_title"
+        layout="@layout/titlebar" />
+
+    <com.haotang.pet.view.MyScrollView
+        android:id="@+id/sv_giftcard_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_giftcard_list_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/vw_giftcard_top"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:background="@color/transparent" />
+
+            <ImageView
+                android:id="@+id/iv_card_list_holder"
+                android:layout_width="match_parent"
+                android:layout_height="239dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cardlist_banner_holder_icon"
+                android:visibility="gone" />
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_giftcard_list"
+                android:layout_width="match_parent"
+                android:layout_height="239dp" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/stl_giftcard_list"
+                android:layout_width="match_parent"
+                android:layout_height="54dip"
+                android:layout_marginTop="116dp"
+                android:background="@drawable/bg_white_topround_20"
+                tl:tl_divider_color="#D8D8D8"
+                tl:tl_divider_padding="17dp"
+                tl:tl_divider_width="1dp"
+                tl:tl_indicator_color="@color/aE2364A"
+                tl:tl_indicator_height="3dip"
+                tl:tl_indicator_margin_bottom="8dip"
+                tl:tl_indicator_width_equal_title="true"
+                tl:tl_tab_space_equal="true"
+                tl:tl_textBold="SELECT"
+                tl:tl_textSelectColor="@color/black"
+                tl:tl_textUnselectColor="@color/black"
+                tl:tl_textsize="15sp"
+                tl:tl_underline_height="1dp"
+                tl:tl_underline_color="@color/aEEEEEE" />
+
+            <com.haotang.pet.view.AutoHeightViewPager
+                android:id="@+id/vp_giftcard_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stl_giftcard_list"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </com.haotang.pet.view.MyScrollView>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl_giftcard_list_two"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_below="@+id/rl_giftcard_list_title"
+        android:background="@color/white"
+        android:visibility="gone"
+        tl:tl_divider_color="#D8D8D8"
+        tl:tl_divider_padding="17dp"
+        tl:tl_divider_width="1dp"
+        tl:tl_indicator_color="@color/aE2364A"
+        tl:tl_indicator_height="3dip"
+        tl:tl_indicator_margin_bottom="8dip"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textBold="SELECT"
+        tl:tl_textSelectColor="@color/black"
+        tl:tl_textUnselectColor="@color/black"
+        tl:tl_textsize="15sp"
+        tl:tl_underline_height="1dp"
+        tl:tl_underline_color="@color/aEEEEEE" />
+</RelativeLayout>

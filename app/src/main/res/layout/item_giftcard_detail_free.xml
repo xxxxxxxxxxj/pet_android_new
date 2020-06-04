@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_item_free_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <RelativeLayout
+            android:id="@+id/rl_giftcard_freebg"
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            android:background="@drawable/coupon_left"
+            android:layout_marginTop="@dimen/dp_10" >
+            <ImageView
+                android:id="@+id/iv_giftcard_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/free"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:id="@+id/ll_card_manjian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/layout_top_price_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.7"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_moneyleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tv_couponitem_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textColor="@color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_bottom_show_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top|center"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/texview_show_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="满减券"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_card_discount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_card_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:text="8.0"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="折"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toRightOf="@+id/rl_giftcard_freebg"
+            android:background="#FFF8F8F8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_freename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="9dp"
+                android:text="特色服务免单券"
+                android:textColor="#FF000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_item_freedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="10dp"
+                android:text="365天可用"
+                android:textColor="#FF666666"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layerType="software"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_free_line"/>
+    <RelativeLayout
+        android:id="@+id/rl_item_open"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_giftcard_service_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="详情说明"
+            android:textColor="#FF666666"
+            android:layout_centerVertical="true"
+            android:textSize="12sp" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_item_freeopen"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/giftcard_free_down_icon"
+            />
+    </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_item_showall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_item_free_top">
+        <TextView
+            android:id="@+id/tv_item_free_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:text="使用须知"
+            android:textColor="#FF333333"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_item_free_content"
+            android:layout_below="@+id/tv_item_free_tip"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="#FF333333"
+            android:textSize="12sp"
+            android:layout_marginTop="3.5dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bggray">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bggray"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/mTabLayout_4"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:background="@color/white"
+            tl:tl_divider_color="@color/transparent"
+            tl:tl_divider_padding="13dp"
+            tl:tl_divider_width="0dp"
+            tl:tl_iconVisible="false"
+            tl:tl_indicator_color="@color/aE2364A"
+            tl:tl_indicator_height="3dip"
+            tl:tl_indicator_margin_bottom="3dip"
+            tl:tl_indicator_width="32dp"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textBold="SELECT"
+            tl:tl_textSelectColor="@color/a333333"
+            tl:tl_textUnselectColor="@color/a333333"
+            tl:tl_textsize="14sp"
+            tl:tl_underline_color="@color/aEEEEEE"
+            tl:tl_underline_height="1dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/ll_order_default"
+                android:visibility="gone"
+                layout="@layout/recycler_emptyview" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dip">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

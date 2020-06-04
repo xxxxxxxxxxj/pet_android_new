@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_fosterdy_root"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_marginTop="10dip"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/vw_item_fosterdy_left"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <View
+                android:id="@+id/vw_item_fosterdy_right"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/afff1f2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_fosterdy_day"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_fosterday_redcircle"
+            android:gravity="center"
+            android:text="31"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_fosterdy_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="入住"
+        android:textColor="@color/a333333"
+        android:textSize="10sp" />
+</LinearLayout>

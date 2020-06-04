@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vw_item_shopcart_top"
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        android:background="@color/f8f8ff8" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_shopcart_select"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <ImageView
+            android:id="@+id/iv_item_shopcart_topselect"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/complaint_reason_disable"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_item_shopcart_classname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="TextView"
+            android:textColor="@color/a333333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vw_item_shopcart_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dip"
+        android:background="@color/aEEEEEE" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dip"
+        android:background="@color/aEEEEEE" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_item_shopcart_back"
+            android:layout_width="match_parent"
+            android:layout_height="135dip"
+            android:tag="rl_item_shopcart_back">
+
+            <Button
+                android:id="@+id/btn_item_shopcart_delete"
+                android:layout_width="74dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_red_jianbian"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_shopcart_front"
+            android:layout_width="match_parent"
+            android:layout_height="135dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="15dip"
+            android:tag="ll_item_shopcart_front">
+
+            <ImageView
+                android:id="@+id/iv_item_shopcart_select"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/complaint_reason_disable"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/ll_item_shopcart_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_item_shopcart_shopimg"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@id/iv_item_shopcart_select"
+                    android:background="@drawable/icon_production_default"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.haotang.pet.view.TagTextView
+                        android:id="@+id/tv_item_shopcart_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:layout_marginBottom="5dip"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_item_shopcart_shopgg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dip"
+                        android:maxLines="2"
+                        android:text="TextView"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="100dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true">
+
+                            <TextView
+                                android:id="@+id/tv_item_shopcart_noshop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ellipsize="end"
+                                android:gravity="bottom|right"
+                                android:singleLine="true"
+                                android:text="暂时缺货"
+                                android:textColor="@color/a999999"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_shopcart_tiaozheng"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/iv_item_shopcart_shopjian"
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/icon_item_shopcart_shopjian_avial"
+                                    android:scaleType="fitXY" />
+
+                                <EditText
+                                    android:id="@+id/et_item_shopcart_shopnum"
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/icon_item_shopcart_shopnumbg"
+                                    android:gravity="center"
+                                    android:imeOptions="actionDone"
+                                    android:numeric="integer"
+                                    android:text="0"
+                                    android:textColor="@color/a333333"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_item_shopcart_shopjia"
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/icon_item_shopcart_shopjia_avial"
+                                    android:scaleType="fitXY" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_item_shopcart_shopprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:textColor="@color/aD1494F"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_item_shopcart_shopbuzu"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="0.7"
+                        android:gravity="center_vertical|right"
+                        android:text="TextView"
+                        android:textColor="@color/aD1494F"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

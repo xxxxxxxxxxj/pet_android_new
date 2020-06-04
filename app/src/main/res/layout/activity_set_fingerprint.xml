@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af7f7f7"
+    android:orientation="vertical"
+    tools:context=".SetFingerprintActivity">
+
+    <include
+        android:id="@+id/rl_setfingerprint_ttile"
+        layout="@layout/titlebar_white" />
+
+    <TextView
+        android:id="@+id/tv_setfingerprint_tg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dip"
+        android:layout_marginBottom="50dip"
+        android:text="跳过"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_setfingerprint_tg"
+        android:layout_below="@id/rl_setfingerprint_ttile"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_setfingerprint"
+                android:layout_width="89dip"
+                android:layout_height="89dip"
+                android:layout_marginBottom="40dip"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_zw_open" />
+
+            <TextView
+                android:id="@+id/tv_setfingerprint_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:text="指纹支付已开通"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_setfingerprint_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证系统指纹快速完成付款，更加安全便捷"
+                android:textColor="@color/a666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.haotang.pet.view.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="25dip"
+            android:layout_marginRight="15dip"
+            android:background="@color/white"
+            app:hl_cornerRadius="16dp"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="@color/default_shadow_color"
+            app:hl_shadowLimit="15dp">
+
+            <TextView
+                android:id="@+id/tv_setfingerprint_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="@drawable/bg_ff3a1e_round16"
+                android:gravity="center"
+                android:text="关闭指纹支付"
+                android:textColor="@color/white"
+                android:textSize="17sp">
+
+            </TextView>
+        </com.haotang.pet.view.ShadowLayout>
+    </LinearLayout>
+</RelativeLayout>

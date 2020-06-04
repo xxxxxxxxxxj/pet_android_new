@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/iv_appointtimeover_bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="206.5dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pet_data_setback">
+
+        <RelativeLayout
+            android:id="@+id/rl_appointtimeover_bottomdia_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="15dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <ImageView
+                android:id="@+id/iv_appointtimeover_bottomdia_close"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_appoint_close" />
+
+            <TextView
+                android:id="@+id/tv_appointtimeover_bottomdia_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_appointtimeover_bottomdia_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="49dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_appointtimeover_bottomdia_worker"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_orange_jianbian"
+                android:gravity="center"
+                android:text="选择其他美容师"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_appointtimeover_bottomdia_time"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_red_jianbian"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_appointtimeover_bottomdia_bottom"
+            android:layout_below="@id/rl_appointtimeover_bottomdia_title"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="您好，您预约的美容师时间已满，添加此单项需修改当前美容师时间，或更换其他美容师  "
+            android:textColor="@color/a666666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

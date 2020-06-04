@@ -1,0 +1,4 @@
+<resources>
+    <string name="no_exception">程序出现了点小问题，程序员小哥正在努力修复中</string>
+    <string name="net_error">网络异常，请检查您的网络</string>
+</resources>

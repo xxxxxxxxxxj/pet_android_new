@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <!--android:background="@drawable/back_icon_logos"-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+<!-- 
+com.haotang.pet.view.CircleImageView -->
+        <ImageView
+            android:id="@+id/imageView_item_go_shop_icon"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_default"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"/>
+        
+        
+         <!-- custom:border_color="#FFFFFF"
+            custom:border_width="1dip"  
+            
+            
+             android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_item_go_shop_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLength="5"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/a333333" />
+    <TextView
+        android:id="@+id/textView_item_go_shop_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:maxLength="5"
+        android:text=""
+        android:textColor="@color/a666666"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

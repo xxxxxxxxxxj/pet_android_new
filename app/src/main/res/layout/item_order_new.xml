@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/af6f8fa"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_right_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_right_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="15dip"
+            android:text="待支付"
+            android:textColor="@color/aff3a1e"
+            android:textSize="14sp" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/tv_item_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:layout_marginRight="5dip"
+            android:gravity="center"
+            app:isConvertDaysToHours="false"
+            app:isHideTimeBackground="false"
+            app:isShowDay="false"
+            app:isShowHour="false"
+            app:isShowMillisecond="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:suffixGravity="center"
+            app:suffixLRMargin="0dp"
+            app:suffixTextColor="@color/a717985"
+            app:suffixTextSize="14sp"
+            app:timeBgColor="@color/transparent"
+            app:timeBgRadius="0dp"
+            app:timeTextColor="@color/a717985"
+            app:timeTextSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_item_order_qxdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消订单"
+            android:textColor="@color/a717985"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.haotang.pet.view.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_right_status"
+        android:background="@color/white"
+        app:hl_cornerRadius="20dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="@color/default_shadow_color"
+        app:hl_shadowLimit="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_item_order_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="12dip"
+            android:paddingBottom="10dip">
+
+            <TextView
+                android:id="@+id/tv_orderitem_servicename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:paddingLeft="20dip"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/a002241"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_marginBottom="10dp"
+                style="@style/divide_style"/>
+            <TextView
+                android:id="@+id/tv_orderitem_fwmd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dip"
+                android:text="服务门店：百子湾寄养酒店"
+                android:textColor="@color/a717985"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dip"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_orderitem_starttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:gravity="center_vertical"
+                        android:text="服务时间："
+                        android:textColor="@color/a717985"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_orderitem_addrtype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="服务方式：到店服务"
+                            android:textColor="@color/a717985"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_orderitem_pickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(需接送)"
+                            android:textColor="@color/aBB996C"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_orderitem_jynum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="37dip"
+                        android:layout_height="37dip"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_foster_num" />
+
+                    <TextView
+                        android:id="@+id/tv_orderitem_totalday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="10dip"
+                style="@style/divide_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dip"
+                android:paddingRight="15dip">
+
+                <LinearLayout
+                    android:id="@+id/ll_orderitem_servicefee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:layout_marginRight="6dip"
+                        android:text="合计"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dip"
+                        android:text="¥"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_orderitem_servicefee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/a333333"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/ll_orderitem_servicefee"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview_gratuity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_button_666_border"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:text="打赏美容师"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textview_appen_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_button_666_border"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:text="追加单项"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_orderitem_pingjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_button_666_border"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:text="TextView"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_orderitem_dzf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_orderlist_dzf" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.haotang.pet.view.ShadowLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:paddingRight="20dip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_order_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_item_order_dian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="-13dp"
+            android:text="…"
+            android:textColor="@color/a002241"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

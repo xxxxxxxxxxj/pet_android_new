@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_smallicon_root"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.haotang.pet.view.NiceImageView
+        android:id="@+id/nv_mainfrag_smallicon"
+        android:scaleType="centerCrop"
+        app:corner_radius="6dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="200dp"
+        android:layout_height="110dp" />
+</RelativeLayout>

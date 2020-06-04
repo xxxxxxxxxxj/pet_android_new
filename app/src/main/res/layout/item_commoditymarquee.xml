@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:maxWidth="187.5dip"
+    android:layout_height="40dip"
+    android:background="@drawable/ll_commoditymarquee"
+    android:gravity="center_vertical"
+    android:alpha="0.9"
+    android:paddingLeft="5dip"
+    android:paddingRight="10dip">
+
+    <ImageView
+        android:id="@+id/iv_item_commodity_marquee"
+        android:layout_width="19dip"
+        android:layout_height="19dip"
+        android:layout_marginRight="5dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/user_icon_unnet_circle" />
+
+    <TextView
+        android:id="@+id/tv_item_commodity_marquee"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/a666666"
+        android:textSize="10sp" />
+</LinearLayout>

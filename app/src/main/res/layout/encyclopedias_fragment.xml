@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pla="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <include
+        android:id="@+id/ll_empty_view"
+        layout="@layout/recycler_emptyview"
+        android:visibility="gone" />
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/mrl_encyclopedias_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isLoadMore="true"
+        app:overlay="true"
+        app:progress_colors="@array/material_colors"
+        app:progress_size_type="normal"
+        app:wave_color="#90ffffff"
+        app:wave_height_type="normal"
+        app:wave_show="true">
+
+        <com.huewu.pla.lib.MultiColumnListView
+            android:id="@+id/mclv_encyclopedias_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dip"
+            android:background="@color/af8f8f8"
+            pla:plaColumnNumber="2"
+            pla:plaLandscapeColumnNumber="2" />
+    </com.cjj.MaterialRefreshLayout>
+</RelativeLayout>

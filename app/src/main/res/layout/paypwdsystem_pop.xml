@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="411dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_top_round"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="57.5dip"
+            android:background="@color/transparent"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <ImageView
+                android:id="@+id/iv_paypwdsystem_pop_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/iv_commodity_shopquanyipop_close" />
+
+            <TextView
+                android:id="@+id/tv_paypwdsystem_pop_pwdtype"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="指纹支付"
+                android:textColor="@color/a333333"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_paypwdsystem_pop_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@id/tv_paypwdsystem_pop_pwdtype"
+                android:layout_toRightOf="@id/iv_paypwdsystem_pop_close"
+                android:gravity="center"
+                android:text="确认付款"
+                android:textColor="@color/a333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/aEEEEEE" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_paypwdsystem_pop_payresult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.haotang.pet.view.CustomStatusView
+                    android:id="@+id/csv_paypwdsystem_pop"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dip"
+                    android:padding="3dp"
+                    app:progress_radius="20dp"
+                    app:progress_width="3dp" />
+
+                <TextView
+                    android:id="@+id/tv_paypwdsystem_pop_payresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在确认"
+                    android:textColor="@color/a333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_paypwdsystem_pop_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_paypwdsystem_pop"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="15dip"
+                    android:background="@drawable/bg_button_orange"
+                    android:text="密码支付"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/btn_paypwdsystem_pop">
+
+                    <LinearLayout
+                        android:id="@+id/ll_paypwdsystem_erweima"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="55dip"
+                            android:layout_height="60dip"
+                            android:layout_marginBottom="20dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_dunpai" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="15dip"
+                            android:text="查看付款二维码需安全验证"
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_paypwdsystem_pricedesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_paypwdsystem_pop_payprice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginTop="15dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_marginBottom="26dip"
+                            android:gravity="center"
+                            android:text="¥0.00"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip">
+
+                            <TextView
+                                android:id="@+id/tv_paypwdsystem_pop_paywaytitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="我的余额"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="支付方式"
+                                android:textColor="@color/a333333"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginTop="10dip"
+                            android:background="@color/aEEEEEE" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_paypwdsystem_pop_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_paypwdsystem_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_marginBottom="15dip">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="12dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="12dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="12dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="12dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="12dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+
+                                <View
+                                    android:layout_width="0dip"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_ebebeb_round" />
+                            </LinearLayout>
+
+                            <com.haotang.pet.codeview.CodeView
+                                android:id="@+id/cv_paypwdsystem_pop_pwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                app:borderColor="@color/transparent"
+                                app:borderWidth="0px"
+                                app:codeColor="@color/black"
+                                app:dividerColor="@color/transparent"
+                                app:dividerWidth="12dip"
+                                app:pointRadius="5dip" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip">
+
+                            <TextView
+                                android:id="@+id/tv_paypwdsystem_pop_wjmm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="忘记密码?"
+                                android:textColor="@color/a333333"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_paypwdsystem_pop_pwderror"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="密码输入有误"
+                                android:textColor="@color/aD0021B"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <com.haotang.pet.codeview.KeyboardView
+                        android:id="@+id/kbv_paypwdsystem_pop"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

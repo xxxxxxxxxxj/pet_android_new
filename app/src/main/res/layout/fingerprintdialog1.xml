@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pop_selectphoto_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@color/black"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="295dip"
+        android:layout_height="298.5dip"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dip"
+            android:background="@drawable/bg_dialog_zhiwen_top12"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dip"
+                android:layout_height="65dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_zhiwen_hui" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在指纹验证"
+                android:textColor="@color/a717985"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="再试一次"
+                android:textColor="@color/a717985"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/aEEEEEE" />
+
+        <TextView
+            android:id="@+id/tv_fingerdialog1_again"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_marginBottom="12dip"
+            android:background="@drawable/bg_dialog_zhiwen_bottom12"
+            android:gravity="center"
+            android:text="再次尝试验证"
+            android:textColor="@color/aff3a1e"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_fingerdialog1_qx"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_dialog_zhiwen_12"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/aff3a1e"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

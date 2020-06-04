@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/recycler_emptyview"
+            android:id="@+id/ll_pet_diary_empty"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_pet_diary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aF8F1E8"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_petdiary_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@color/aF8F1E8"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:paddingLeft="10dip"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip">
+
+                    <ImageView
+                        android:id="@+id/iv_petdiary_pettype"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/main_dog_img"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/tv_petdiary_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/a666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.cjj.MaterialRefreshLayout
+                android:id="@+id/mrl_petdiary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:isLoadMore="true"
+                app:overlay="true"
+                app:progress_colors="@array/material_colors"
+                app:progress_size_type="normal"
+                app:wave_color="#90ffffff"
+                app:wave_height_type="normal"
+                app:wave_show="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_petdiary_diary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+            </com.cjj.MaterialRefreshLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

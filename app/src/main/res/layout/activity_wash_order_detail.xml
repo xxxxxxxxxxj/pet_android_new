@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <include
+        android:id="@+id/rl_washorderdetail_title"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_washorderdetail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/rl_washorderdetail_yfkts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingRight="10dip">
+
+            <Button
+                android:id="@+id/btn_washorderdetail_yfkts"
+                android:layout_width="wrap_content"
+                android:layout_height="24.5dp"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/bg_button_bbbbbb_border"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="我要投诉"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_washorderdetail_yfkpj"
+                android:layout_width="wrap_content"
+                android:layout_height="24.5dp"
+                android:background="@drawable/bg_button_bbbbbb_border"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="去评价"
+                android:textColor="@color/a666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_washorderdetail_dfk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_washorderdetail_submit"
+                android:layout_width="140dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_red_jianbian"
+                android:gravity="center"
+                android:text="去付款"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_washorderdetail_submit"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="需付款 : "
+                    android:textColor="@color/a333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_washorderdetail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/a333333"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_washorderdetail_bottom"
+        android:layout_below="@id/rl_washorderdetail_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dip"
+                    android:background="@drawable/bg_red_jianbian_updown"
+                    android:padding="20dip">
+
+                    <LinearLayout
+                        android:id="@+id/ll_washorderdetail_dfktime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="剩"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_dfkminute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dip"
+                                android:layout_marginRight="3dip"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="分"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_dfksecond"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dip"
+                                android:layout_marginRight="3dip"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="秒"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="自动取消订单"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_washorderdetail_dfkneedprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="需付款 : "
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/ll_washorderdetail_dfktime"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_washorderdetail_status"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/to_wait_pay" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderdetail_statusname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/transparent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_washorderdetail_pet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="服务信息"
+                    android:textColor="@color/a333333"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_washorderdetail_mrsicon"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:layout_marginRight="10dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_icon_unnet_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="美容师 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_mrsname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip">
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_fwmd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="服务门店 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_washorderdetail_call"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/icon_phone"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_shop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@id/iv_washorderdetail_call"
+                                android:layout_toRightOf="@id/tv_washorderdetail_fwmd"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="服务方式 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_fwfs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_js"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/aBB996C"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="服务时间 : "
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text=""
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderdetail_fwbz"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <ImageView
+                            android:id="@+id/iv_washorderdetail_fwbzright"
+                            android:layout_width="7dip"
+                            android:layout_height="11.5dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_right_more" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/iv_washorderdetail_fwbzright"
+                            android:gravity="center_vertical|left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="服务备注"
+                                android:textColor="@color/a333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_fwbz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="无"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderdetail_mddz"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.5dip"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip">
+
+                        <ImageView
+                            android:id="@+id/iv_washorderdetail_mddzright"
+                            android:layout_width="7dip"
+                            android:layout_height="11.5dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_right_more" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/iv_washorderdetail_mddzright"
+                            android:gravity="center_vertical|left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="门店地址"
+                                android:textColor="@color/a333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_washorderdetail_mddz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/a666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@color/aEEEEEE" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_yhxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <ImageView
+                        android:id="@+id/iv_washorderdetail_yhxx_fz"
+                        android:layout_width="12dip"
+                        android:layout_height="13dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_arrow_down_beau" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/iv_washorderdetail_yhxx_fz"
+                        android:text="用户信息"
+                        android:textColor="@color/a333333"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderdetail_yhxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dip"
+                            android:text="联  系  人 : "
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderdetail_lxr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dip"
+                            android:text="联系方式 : "
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderdetail_lxfs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dip"
+                            android:text="联系地址 : "
+                            android:textColor="@color/a333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_washorderdetail_lxdz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/a666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_totalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_totalprice"
+                        android:text="订单总金额"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_jcfw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_jcfwprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_jcfwprice"
+                        android:text="基础服务"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_dxfw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_dxfwprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_dxfwprice"
+                        android:text="单项服务"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_zjdx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_zjdxprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_zjdxprice"
+                        android:text="追加单项"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_js"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_smjsprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_smjsprice"
+                        android:text="上门接送"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_smfwf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_smfwfprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_smfwfprice"
+                        android:text="上门服务费"
+                        android:textColor="@color/a333333"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_washorderdetail_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_washorderdetail_tkprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip">
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_tkprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/aD0021B"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_washorderdetail_tkprice"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dip"
+                            android:layout_height="15dip"
+                            android:layout_marginRight="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/refund" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="退款"
+                            android:textColor="@color/a333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="10dip"
+                    android:background="@color/aEEEEEE" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_washorderdetail_payway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_washorderdetail_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:text="投诉内容"
+                    android:textColor="@color/a333333"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginBottom="15dip"
+                    android:background="@color/aEEEEEE" />
+
+                <TextView
+                    android:id="@+id/tv_washorderdetail_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:textColor="@color/a333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_washorderdetail_feedback_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/aBB996C"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="15dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付方式："
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_zffs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单编号："
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_ddbh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text=""
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_fz"
+                        android:layout_width="34dip"
+                        android:layout_height="16dip"
+                        android:background="@drawable/copy_order_num"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提交时间："
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_tjsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_washorderdetail_wcsj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="完成时间："
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_washorderdetail_wcsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

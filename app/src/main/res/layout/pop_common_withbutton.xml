@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <RelativeLayout
+        android:id="@+id/rl_commonpop_dimiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_commonpop_top" />
+
+    <RelativeLayout
+        android:background="@drawable/bg_white_topround_20"
+        android:id="@+id/rl_commonpop_top"
+        android:layout_width="match_parent"
+        android:layout_height="391dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_commonpop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="请选择需要退货的原因："
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_commonpop_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_commonpop_sure"
+            android:layout_below="@+id/tv_commonpop_title"
+            android:layout_marginLeft="15dp"
+            android:overScrollMode="never"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/btn_commonpop_sure"
+            android:layout_width="290dip"
+            android:layout_height="54dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/bg_red_jianbian_icon"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

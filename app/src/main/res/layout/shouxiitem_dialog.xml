@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/bg_round_white_12"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/shouxiitem_dialog_topimg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_shouxiitem_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dip"
+                android:layout_marginTop="20dip"
+                android:text="首席洗护套餐已包含以下单项"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingRight="10dip"
+                android:paddingLeft="10dip"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_shouxiitem_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/aEEEEEE" />
+
+            <TextView
+                android:id="@+id/tv_shouxiitem_dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="43dip"
+                android:gravity="center"
+                android:text="我知道了"
+                android:textColor="@color/a999999"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/mall_order_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_image_default" />
+
+    <RelativeLayout
+        android:id="@+id/layout_mall_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/mall_order_icon">
+
+        <TextView
+            android:id="@+id/textview_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mall_hot_back"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingTop="1dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="1dp"
+            android:text="热门"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <com.haotang.pet.view.TagTextView
+            android:id="@+id/textview_mall_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:text=" "
+            android:textColor="@color/a333333"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_show_atr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_mall_top"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/mall_order_icon"
+        android:text="商品规格"
+        android:textColor="@color/a666666" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_show_atr"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom"
+        android:layout_toRightOf="@+id/mall_order_icon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="@color/aD1494F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textview_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@color/aD1494F"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textview_show_goods_nums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text=" "
+            android:textColor="@color/a666666" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_bottom_show"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/mall_order_icon"
+        android:background="@color/aEEEEEE" />
+</RelativeLayout>

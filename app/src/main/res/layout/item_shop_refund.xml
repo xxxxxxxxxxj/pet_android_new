@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/iv_refund_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/tv_refund_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/iv_refund_icon"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_refund_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="100g／袋，口味花生味"
+            android:textColor="#ff666666"
+            android:layout_toRightOf="@+id/iv_refund_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_refund_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff666666"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="12sp"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

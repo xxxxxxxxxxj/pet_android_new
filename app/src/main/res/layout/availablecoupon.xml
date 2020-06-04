@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <include
+        android:id="@+id/rl_selectcoupon_top"
+        layout="@layout/titlebar" />
+
+    <com.haotang.pet.view.ShadowLayout
+        android:id="@+id/sl_selectcoupon_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="64dip"
+        android:background="@color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dip"
+        tl:hl_cornerRadius="20dip"
+        tl:hl_dx="0dp"
+        tl:hl_dy="0dp"
+        tl:hl_shadowColor="@color/default_shadow_color"
+        tl:hl_shadowLimit="10dp">
+
+        <Button
+            android:id="@+id/btn_selectcoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_red_round16"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </com.haotang.pet.view.ShadowLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_selectcoupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/sl_selectcoupon_bottom"
+        android:layout_below="@id/rl_selectcoupon_top"
+        android:paddingTop="10dip" />
+</RelativeLayout>

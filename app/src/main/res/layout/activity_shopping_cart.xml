@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.haotang.pet.ShoppingCartActivity">
+
+    <include
+        android:id="@+id/shopcart_titlebar"
+        layout="@layout/titlebar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_shopcart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/aEEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_shopcart_bottom_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <ImageView
+                android:id="@+id/iv_shopcart_select"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/complaint_reason_disable"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                android:textColor="@color/a333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_shopcart_submit"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_red_jianbian"
+            android:text="结算"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_shopcart_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_shopcart_submit"
+            android:layout_toRightOf="@id/ll_shopcart_bottom_select"
+            android:gravity="center"
+            android:text="总计 ¥0"
+            android:textColor="@color/aD1494F"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_shopcart_bottom"
+        android:layout_below="@id/shopcart_titlebar">
+
+        <LinearLayout
+            android:id="@+id/ll_shopmallorder_nonet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="106.5dip"
+                android:layout_height="96dip"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopmallorder_nonet_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="30dip"
+                android:text="啊哦~网络竟然崩溃了 刷新看看"
+                android:textColor="@color/a999999"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_shopmallorder_nonet"
+                android:layout_width="128.5dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_shopmallorder_nodata_selector"
+                android:gravity="center"
+                android:text="刷新"
+                android:textColor="@color/aBB996C"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_scroll_top"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/mall_scroll_top"
+            android:visibility="gone" />
+
+        <com.haotang.pet.pulltorefresh.PullToRefreshHeadGridView
+            android:id="@+id/ptrhgv_shopcart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:showDividers="none" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

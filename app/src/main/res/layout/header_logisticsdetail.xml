@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_logisticsdetail_nonet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="50dip"
+            android:paddingTop="50dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="106.5dip"
+                android:layout_height="96dip"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopmallorder_nonet_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="30dip"
+                android:text="啊哦~网络竟然崩溃了 刷新看看"
+                android:textColor="@color/a999999"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_logisticsdetail_nonet"
+                android:layout_width="128.5dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_shopmallorder_nodata_selector"
+                android:gravity="center"
+                android:text="刷新"
+                android:textColor="@color/aBB996C"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_logisticsdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dip">
+
+                <TextView
+                    android:id="@+id/tv_header_logisticsdetail_wlgs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流公司："
+                    android:textColor="@color/a999999"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_item_logisticsdetail_ordercopy"
+                        android:layout_width="40dip"
+                        android:layout_height="17dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_hui_round"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="@color/a666666"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_header_logisticsdetail_wldh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/btn_item_logisticsdetail_ordercopy"
+                        android:text="物流单号："
+                        android:textColor="@color/a999999"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:background="@color/af8f8f8"
+                android:gravity="center"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="物流数据由快递100提供"
+                android:textColor="@color/a999999"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_header_logisticsdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/tv_header_logisticsdetail_nologistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:gravity="center"
+                    android:text="暂未查询物流信息，请复制物流单号手动查询"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/ll_header_logisticsdetail_recommend"
+        layout="@layout/ll_recommed" />
+</LinearLayout>

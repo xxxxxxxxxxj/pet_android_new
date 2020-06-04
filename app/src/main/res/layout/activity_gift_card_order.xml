@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.haotang.pet.ShopMallOrderActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl_giftcard_order"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:background="@color/white"
+        tl:tl_divider_color="@color/transparent"
+        tl:tl_divider_padding="13dp"
+        tl:tl_divider_width="0dp"
+        tl:tl_indicator_color="@color/aE2364A"
+        tl:tl_indicator_height="3dip"
+        tl:tl_indicator_margin_bottom="3dip"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_textBold="SELECT"
+        tl:tl_textSelectColor="@color/black"
+        tl:tl_textUnselectColor="@color/black"
+        tl:tl_textsize="15sp"
+        tl:tl_underline_color="@color/aEEEEEE" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:background="#F0F5F9"
+        android:id="@+id/vp_giftcard_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

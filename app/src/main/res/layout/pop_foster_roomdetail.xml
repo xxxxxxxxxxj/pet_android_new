@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_pop_fosterroomdetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_pop_fosterroomdetail"
+        android:layout_width="match_parent"
+        android:layout_height="500dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_topround_20"
+        android:orientation="vertical"
+        android:paddingTop="20dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dip">
+        <RelativeLayout
+            android:id="@+id/rl_item_fosterroomdetail_submit"
+            android:layout_width="78dp"
+            android:layout_height="39.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_redround_order"
+            android:paddingLeft="2dp"
+            android:paddingTop="1.5dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="5dp">
+            <TextView
+                android:id="@+id/tv_pop_fosterroomdetail_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="预订"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/rl_item_fosterroomdetail_submit"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pop_fosterroomdetail_roomname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginBottom="3dip"
+                    android:text="TextView"
+                    android:textColor="@color/a333333"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_pop_fosterroomdetail_roomgg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginBottom="3dip"
+                    android:text="TextView"
+                    android:textColor="@color/a666666"
+                    android:textSize="12sp" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tfl_pop_fosterroomdetail_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginBottom="2dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_pop_fosterroomdetail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text=" /天"
+                android:textColor="@color/a333333"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pop_fosterroomdetail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginBottom="17dip"
+            android:text="TextView"
+            android:textColor="@color/a717985"
+            android:textSize="12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pop_fosterroomdetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</RelativeLayout>

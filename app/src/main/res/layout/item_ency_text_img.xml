@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+    <TextView
+        android:id="@+id/textview_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:lineSpacingExtra="5dp"
+        android:textSize="16sp"
+        android:text="有一种病名字很“慢”，让你玩网打开附近的哈佛打卡机的打开附近的卡和饭卡的卷发的咖啡的卷发快剪短发，的看法的卡交罚款交电费卡贴就是一种病。"/>
+    <ImageView
+        android:id="@+id/item_img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mainto_hfive"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"/>
+</LinearLayout>

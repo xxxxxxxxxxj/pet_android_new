@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_beautydetail_icon"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_beautydetail_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/white_back_top" />
+
+        <TextView
+            android:id="@+id/tv_beautydetail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:visibility="gone"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_beauty_share"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_foster_share" />
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--折叠部分-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_marginBottom="-30dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_beauty_level"
+                        android:layout_width="122dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        />
+                    <com.haotang.pet.view.AutoPollRecyclerView
+                        android:id="@+id/rv_beautydetail_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="84dp"
+                        android:layout_below="@+id/iv_beauty_level"
+                        android:layout_marginTop="26dp" />
+                    <TextView
+                        android:id="@+id/tv_beauty_noproduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暂无作品"
+                        android:textColor="#ffffffff"
+                        android:layout_below="@+id/iv_beauty_level"
+                        android:layout_marginTop="73dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14sp"
+                        />
+                    <!--作品点击区域-->
+                    <RelativeLayout
+                        android:id="@+id/rl_beautydetail_checkproduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rv_beautydetail_one"
+                        android:layout_marginTop="42dp">
+
+                        <TextView
+                            android:id="@+id/tv_beatydetail_productnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/tv_beautydetail_numtip"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="27sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_beautydetail_numtip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_beatydetail_productnum"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="27dp"
+                            android:text="个作品"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_beatydetail_productnum"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/iv_beautydetail_right"
+                                android:text="查看更多作品"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_beautydetail_right"
+                                android:layout_width="7dp"
+                                android:layout_height="11dp"
+                                android:layout_below="@+id/tv_beatydetail_productnum"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/icon_white_toright" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <!--悬浮部分-->
+            <RelativeLayout
+                android:id="@+id/rl_beautydetail_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/bg_white_topround_20">
+                    <TextView
+                        android:id="@+id/tv_beautydetail_name"
+                        android:layout_width="wrap_content"
+                        tools:text="张三"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ff002241"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="130dp"
+
+                        />
+                    <ImageView
+                        android:id="@+id/iv_beautydetail_sex"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_toRightOf="@+id/tv_beautydetail_name"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_beautydetail_ordertime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ff717985"
+                        android:textSize="12sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        />
+                </RelativeLayout>
+                <com.haotang.pet.view.ShadowLayout
+                    expandableTextView:hl_shadowBackColor="@color/transparent"
+                    expandableTextView:hl_shadowColor="@color/bt_5"
+                    expandableTextView:hl_topShow="false"
+                    expandableTextView:hl_dy="5dp"
+                    expandableTextView:hl_shadowLimit="15dp"
+                    expandableTextView:hl_leftShow="false"
+                    expandableTextView:hl_rightShow="false"
+                    expandableTextView:hl_cornerRadius="33dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.haotang.pet.view.NiceImageView
+                        android:id="@+id/nv_beautydetail_head"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        expandableTextView:corner_radius="33dp"
+
+                        />
+                </com.haotang.pet.view.ShadowLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.haotang.pet.view.MyScrollView
+            android:id="@+id/sv_beautydetail"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--滑动部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl_beautydetail_header"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_beautydetail_servicenumtip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_beautydetail_servicenum"
+                        android:layout_marginLeft="15dp"
+                        android:text="服务单"
+                        android:textColor="#ff9fa7b9"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_beautydetail_servicenum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_beautydetail_servicenumtip"
+                        android:textColor="#ff002241"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_beautydetail_goodtip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_beautydetail_good"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/tv_beautydetail_servicenum"
+                        android:text="好评率"
+                        android:textColor="#ff9fa7b9"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_beautydetail_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_beautydetail_goodtip"
+                        android:textColor="#ff002241"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_beautydetail_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="自我介绍"
+                    android:textColor="#ff384359"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="15dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textColor="#717985"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户评价"
+                        android:textColor="#ff384359"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_beautydetail_commonnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_beautydetail_redright"
+                        android:text="0条评价"
+                        android:textColor="#ffff3a1e"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_beautydetail_redright"
+                        android:layout_width="7dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/icon_red_right" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_beautydetail_eva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_beautydetail_alleva"
+                    android:layout_width="171dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/icon_beautydetail_moreeva" />
+
+                <TextView
+                    android:id="@+id/tv_beautydetail_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="预约服务"
+                    android:textColor="#ff384359"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_beautydetail_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </com.haotang.pet.view.MyScrollView>
+        <!--滑动部分-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout
+        android:id="@+id/ll_beautydetail_gobottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_b8black_round"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33.5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="12.5dp"
+            android:text="快速预约服务"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9.5dp"
+            android:layout_marginRight="33.5dp"
+            android:src="@drawable/icon_alladdress_up" />
+    </LinearLayout>
+</RelativeLayout>

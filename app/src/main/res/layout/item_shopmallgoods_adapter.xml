@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dip">
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods1"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <View
+            android:id="@+id/vw_shoppingmallfrag_jkhh"
+            android:layout_width="match_parent"
+            android:layout_height="25dip"
+            android:background="@color/f8f8ff8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/vw_shoppingmallfrag_jkhh">
+
+            <ImageView
+                android:id="@+id/iv_itemsopmallgoods2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+
+            <ImageView
+                android:id="@+id/iv_itemsopmallgoods3"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dip">
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods4"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dip">
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods6"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods7"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods8"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+
+        <ImageView
+            android:id="@+id/iv_itemsopmallgoods9"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_production_default" />
+    </LinearLayout>
+</LinearLayout>

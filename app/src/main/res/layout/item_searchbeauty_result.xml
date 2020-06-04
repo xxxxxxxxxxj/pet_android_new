@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.haotang.pet.view.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:hl_cornerRadius="20dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="@color/default_shadow_color"
+        app:hl_shadowLimit="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.haotang.pet.view.NiceImageView
+                android:id="@+id/nv_searchbeauty_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:corner_radius="22dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="12.5dp" />
+
+            <TextView
+                android:id="@+id/tv_searchbeauty_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="22.5dp"
+                android:layout_toRightOf="@+id/nv_searchbeauty_head"
+                android:text="周杰伦"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_item_serchbeau_jb"
+                android:layout_width="43.5dip"
+                android:layout_height="15dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="24dp"
+                android:layout_toRightOf="@+id/tv_searchbeauty_name"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_serchbeau_level1" />
+
+            <TextView
+                android:id="@+id/tv_searchbeauty_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务 6455单"
+                android:textColor="#ff666666"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tv_searchbeauty_name"
+                android:layout_toRightOf="@+id/nv_searchbeauty_head"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_searchbeauty_good"
+                android:layout_width="81dp"
+                android:layout_height="17dp"
+                android:text=" 好评率 99.8%"
+                android:textColor="#ff666666"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/tv_searchbeauty_name"
+                android:layout_toRightOf="@+id/tv_searchbeauty_order"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:id="@+id/iv_item_serchbeau_yy"
+                android:layout_width="80dip"
+                android:layout_height="33dip"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="5dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_serchbeau_yy" />
+        </RelativeLayout>
+    </com.haotang.pet.view.ShadowLayout>
+</RelativeLayout>

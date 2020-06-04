@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dip"
+        android:paddingTop="7dip">
+
+        <TextView
+            android:id="@+id/tv_item_billinfodialog_payway_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/a666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_item_billinfodialog_payway_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/tv_item_billinfodialog_payway_price"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/a666666"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

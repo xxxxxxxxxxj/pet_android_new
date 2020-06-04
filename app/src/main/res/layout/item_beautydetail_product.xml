@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.haotang.pet.view.NiceImageView
+        android:id="@+id/nv_beautydetail_product"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        app:corner_radius="24dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        />
+</RelativeLayout>

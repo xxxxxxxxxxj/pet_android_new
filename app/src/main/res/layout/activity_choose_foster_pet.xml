@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af8f8f8">
+
+    <include
+        android:id="@+id/rl_addfosterpet_title"
+        layout="@layout/titlebar_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_addfosterpet_footer"
+        android:layout_width="match_parent"
+        android:layout_height="76dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_jianbian_mypet_add"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_addfosterpet_addpet"
+            android:layout_width="290dip"
+            android:layout_height="54dip"
+            android:background="@drawable/bg_red_jianbian_icon"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  添加宠物"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_addfosterpet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_addfosterpet_footer"
+        android:layout_below="@+id/rl_addfosterpet_title"
+        android:layout_marginTop="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_addfosterpet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

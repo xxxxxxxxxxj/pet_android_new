@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F8F8"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <include layout="@layout/titlebar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="15dp"
+        >
+        <TextView
+            android:id="@+id/tv_refundschdule_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退货商品  共1件"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFEEEEEE"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFFFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_refundschdule_icon"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_refundschedule_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>

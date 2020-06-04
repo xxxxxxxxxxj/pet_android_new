@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_mall_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <!--android:background="@drawable/mall_chooseaddress_list_tranback"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="所在区域"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/a333333"
+                />
+            <ImageView
+                android:id="@+id/img_right_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_close" />
+        </RelativeLayout>
+        <!-- 一级分类 -->
+        <com.haotang.pet.view.HorizontalListView
+            android:id="@+id/mall_search_top_tags"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/aDDDDDD"/>
+        <ListView
+            android:id="@+id/listView_show_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:background="@color/white"
+            android:listSelector="@color/transparent"/>
+    </LinearLayout>
+</LinearLayout>

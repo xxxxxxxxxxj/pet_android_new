@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_allshop_root"
+    >
+
+    <TextView
+        android:id="@+id/tv_shoploc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff384359"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_shoploc_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_shoploc_name"
+        android:background="@drawable/bg_round_fbeded"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffff3a1e"
+        android:textSize="10sp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_shoploc_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff9fa7b9"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:layout_below="@+id/tv_shoploc_name"
+        android:layout_toLeftOf="@+id/tv_shoploc_far"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_shoploc_far"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.66km"
+        android:textColor="#ff717985"
+        android:textSize="14sp"
+        android:layout_below="@+id/tv_shoploc_name"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        />
+</RelativeLayout>

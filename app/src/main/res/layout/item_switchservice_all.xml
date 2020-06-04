@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_switchservice_all_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_item_switchservice_all1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_marginBottom="5dip">
+
+                <TextView
+                    android:id="@+id/tv_item_switchservice_tag1"
+                    android:layout_width="30dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_red_round25"
+                    android:gravity="center"
+                    android:text="NEW"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img1"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_icon_unnet_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img1_bgselect"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_selectbg_alpha"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aD0021B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_switchservice_all2"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_marginBottom="5dip">
+
+                <TextView
+                    android:id="@+id/tv_item_switchservice_tag2"
+                    android:layout_width="30dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_red_round25"
+                    android:gravity="center"
+                    android:text="NEW"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img2"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_icon_unnet_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img2_bgselect"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_selectbg_alpha"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aD0021B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_switchservice_all3"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_marginBottom="5dip">
+
+                <TextView
+                    android:id="@+id/tv_item_switchservice_tag3"
+                    android:layout_width="30dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_red_round25"
+                    android:gravity="center"
+                    android:text="NEW"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img3"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_icon_unnet_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice_img3_bgselect"
+                    android:layout_width="90dip"
+                    android:layout_height="90dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_selectbg_alpha"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/a333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_item_switchservice_price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aD0021B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_item_switchservice_jianer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice1_jianer"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/switch_jianer_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice2_jianer"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/switch_jianer_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_item_switchservice3_jianer"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/switch_jianer_icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item_switchservice_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/bg_shade_switch" />
+    </RelativeLayout>
+</LinearLayout>

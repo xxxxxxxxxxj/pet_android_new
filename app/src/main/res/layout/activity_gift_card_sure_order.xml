@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_cardsure_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8">
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:visibility="gone"></RelativeLayout>
+
+    <include
+        android:id="@+id/rl_giftcard_sure_title"
+        layout="@layout/titlebar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_giftcard_bottom"
+        android:layout_below="@+id/rl_giftcard_sure_title"
+        android:layout_marginBottom="0dp"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--纪念卡头部内容-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="135dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--赠送内容-->
+                    <RelativeLayout
+                        android:id="@+id/rl_giftcard_give"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_icon_gray_lr"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingTop="20dip"
+                        android:paddingRight="@dimen/dp_10"
+                        android:paddingBottom="10dip">
+                        <!--赠送Text-->
+                        <TextView
+                            android:id="@+id/tv_giftcard_give"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="8.5dp"
+                            android:text="赠送"
+                            android:textColor="#BB996C"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_toRightOf="@+id/tv_giftcard_give">
+                            <!--赠送类型-->
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_giftcard_givelist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!--面值、支付金额、购买数量、实际支付内容-->
+                    <LinearLayout
+                        android:id="@+id/rl_giftcard_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_giftcard_give"
+                        android:background="@drawable/bg_icon_bottomtop_lr"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp">
+                        <!--E卡面值内容-->
+                        <RelativeLayout
+                            android:id="@+id/rl_giftcard_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp">
+                            <!--E卡面值字体，字体格式需改变-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="E卡面值"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <!--E卡面值金额，字体格式需改变-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_face"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingTop="10dp"
+                                android:paddingRight="14dp"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/af1f1f1" />
+                        </RelativeLayout>
+
+                        <!--支付金额内容-->
+                        <RelativeLayout
+                            android:id="@+id/rl_giftcard_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_below="@+id/rl_giftcard_value">
+                            <!--支付金额字体-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_payment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="支付金额"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+                            <!--支付金额-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_payment_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="14dp"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/af1f1f1" />
+                        </RelativeLayout>
+
+
+                        <!--购买数量内容-->
+                        <RelativeLayout
+                            android:id="@+id/rl_giftcard_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_below="@+id/rl_giftcard_payment">
+                            <!--购买数量字体-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="购买数量"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:paddingRight="15dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_giftcardorder_jian"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/pop_giftcarddetail_canjian" />
+
+                                <TextView
+                                    android:id="@+id/ed_giftcardorder_buynum"
+                                    android:layout_width="0dp"
+                                    android:layout_height="19.5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_giftcard_buy_num"
+                                    android:gravity="center"
+                                    android:inputType="number"
+                                    android:text="1"
+                                    android:textColor="#FF333333"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_giftcardorder_add"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/pop_giftcarddetail_add" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/af1f1f1" />
+                        </RelativeLayout>
+
+
+                        <!--实际支付内容-->
+                        <RelativeLayout
+                            android:id="@+id/rl_giftcard_actual"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_below="@+id/rl_giftcard_number">
+                            <!--实际支付字体 ，字体格式需改变-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_actual"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="实际支付"
+                                android:textColor="#FF3A1E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <!--实际支付金额，字体格式需改变-->
+                            <TextView
+                                android:id="@+id/tv_giftcard_actual_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:paddingRight="14dp"
+                                android:textColor="#FF3A1E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_giftcard_title"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_marginLeft="3.5dip"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3.5dip"
+                android:background="@drawable/bg_icon_suretop"
+                android:padding="20dp">
+                <!--纪念卡图片-->
+                <ImageView
+                    android:id="@+id/iv_sure_order"
+                    android:layout_width="140dp"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="fitXY" />
+
+                <!--纪念卡名称-->
+                <TextView
+                    android:id="@+id/tv_giftcard_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="9.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18.5dp"
+                    android:layout_marginBottom="4.5dp"
+                    android:layout_toRightOf="@+id/iv_sure_order"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/ll_order_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_giftcard_name"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="9.5dp"
+                    android:layout_toRightOf="@+id/iv_sure_order"/>
+                <TextView
+                    android:id="@+id/tv_order_detail_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_giftcard_name"
+                    android:layout_marginLeft="9.5dp"
+                    android:layout_toRightOf="@+id/iv_sure_order"
+                    android:background="@drawable/bg_wightorgange_round"
+                    android:gravity="center"
+                    android:paddingLeft="8.5dp"
+                    android:paddingRight="8.5dp"
+                    android:textColor="#BB996C"
+                    android:visibility="gone"
+                    android:textSize="10sp" />
+                <!--可用范围-->
+                <TextView
+                    android:id="@+id/tv_giftcard_usablerange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ll_order_discount"
+                    android:layout_marginLeft="9.5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/iv_sure_order"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="限六家门店可用  >"
+                    android:textColor="#BB996C"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <!--勾选协议内容-->
+    <RelativeLayout
+        android:id="@+id/rl_giftcard_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_giftcard_bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone">
+        <!--勾选图片-->
+        <ImageView
+            android:id="@+id/iv_giftcard_sure"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8.05dp"
+            android:src="@drawable/complaint_reason_disable" />
+        <!--请勾选购买E卡协议字体-->
+        <TextView
+            android:id="@+id/tv_giftcard_protocol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="16.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_giftcard_sure"
+            android:text="我已阅读并同意"
+            android:textColor="#666666"
+            android:textSize="12sp" />
+        <!--《E卡协议》字体颜色要改-->
+        <TextView
+            android:id="@+id/tv_giftcard_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="16.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_giftcard_protocol_text"
+            android:text="《宠物家预付卡购卡章程》"
+            android:textColor="@color/aBB996C"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/rl_giftcard_bottom"
+        android:background="@color/af1f1f1" />
+    <!--合计、去付款内容-->
+    <RelativeLayout
+        android:id="@+id/rl_giftcard_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_giftcard_buyprice_right"
+            android:layout_width="140dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_giftcard_gobuy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_red_jianbian"
+                android:gravity="center"
+                android:text="去付款"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_giftcard_buyprice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/rl_giftcard_buyprice_right">
+
+            <TextView
+                android:id="@+id/tv_giftcard_totaltip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="合计:"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_giftcard_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_giftcard_total"
+                android:layout_toRightOf="@id/tv_giftcard_totaltip"
+                android:text="¥ "
+                android:textColor="#FF000000" />
+
+            <TextView
+                android:id="@+id/tv_giftcard_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/tv_giftcard_rmb"
+                android:textColor="#FF000000"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

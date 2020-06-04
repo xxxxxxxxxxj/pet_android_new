@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:background="@drawable/main_local_bg_shade">
+
+    <ImageView
+        android:id="@+id/iv_item_workerlist_list_tag"
+        android:layout_width="43dip"
+        android:layout_height="43dip"
+        android:layout_marginLeft="5.5dip"
+        android:layout_marginTop="6.5dip"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dip">
+
+        <LinearLayout
+            android:id="@+id/ll_item_workerlist_list_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_workerlist_list_sub"
+                android:layout_width="72dip"
+                android:layout_height="40dip"
+                android:layout_marginBottom="5dip"
+                android:background="@drawable/bg_worker_shade_red"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_item_workerlist_list_zztime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/a666666"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_workerlist_list_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/ll_item_workerlist_list_right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_item_workerlist_list_img"
+                android:layout_width="65dip"
+                android:layout_height="65dip"
+                android:layout_marginRight="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_icon_unnet_circle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_item_workerlist_list_worker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_item_workerlist_list_workername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="TextView"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip">
+
+                        <TextView
+                            android:id="@+id/tv_item_workerlist_list_hpl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="TextView"
+                            android:textColor="@color/a666666"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_item_workerlist_list_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="TextView"
+                            android:textColor="@color/a666666"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/tfl_item_workerlist_listbq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_workerlist_list_tuijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_item_workerlist_list_tuijianrname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="默认推荐"
+                        android:textColor="@color/a333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="系统将自动为您指派最合适的美容师"
+                        android:textColor="@color/a666666"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

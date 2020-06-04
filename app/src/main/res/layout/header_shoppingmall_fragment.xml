@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:resAuto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_rpv_header_shoppingmallfrag"
+        android:layout_width="match_parent"
+        android:layout_height="150dip">
+
+        <com.haotang.pet.view.rollviewpager.RollPagerView
+            android:id="@+id/rpv_header_shoppingmallfrag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            custom:rollviewpager_hint_alpha="0"
+            custom:rollviewpager_hint_color="#7c7c7c"
+            custom:rollviewpager_hint_gravity="center"
+            custom:rollviewpager_hint_mode="point"
+            custom:rollviewpager_hint_paddingRight="10dip"
+            custom:rollviewpager_play_delay="3000" />
+
+        <TextView
+            android:id="@+id/tv_shoppingmallfrag_rpvnum"
+            android:layout_width="50dip"
+            android:layout_height="18dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginRight="15dip"
+            android:alpha="0.9"
+            android:background="@drawable/mainfrag_banner_imgnum"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/a999999"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <com.haotang.pet.view.MyGridView
+        android:id="@+id/mgv_shoppingmallfrag_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:horizontalSpacing="15dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5"
+        android:padding="15dip"
+        android:verticalSpacing="15dip" />
+
+    <com.haotang.pet.view.rollviewpager.RollPagerView
+        android:id="@+id/rpv_header_shoppingmallfrag1"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:layout_centerHorizontal="true"
+        custom:rollviewpager_hint_alpha="0"
+        custom:rollviewpager_hint_color="#7c7c7c"
+        custom:rollviewpager_hint_gravity="center"
+        custom:rollviewpager_hint_mode="point"
+        custom:rollviewpager_hint_paddingRight="10dip"
+        custom:rollviewpager_play_delay="3000" />
+
+    <LinearLayout
+        android:id="@+id/ll_shoppingmallfrag_cutedown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/f8f8ff8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dip"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="21dip"
+                android:layout_height="49dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/shoppingmall_vip" />
+
+            <TextView
+                android:id="@+id/tv_shoppingmallfrag_cutedown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aBB996C"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_shoppingmallfrag_cutedown"
+            android:layout_width="match_parent"
+            android:layout_height="170dip"
+            android:background="@color/white"
+            android:fadingEdge="@null"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridView
+                    android:id="@+id/gv_shoppingmallfrag_cutedown"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none"
+                    android:stretchMode="spacingWidthUniform"></GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_shoppingmallfrag_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="15dip"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/f8f8ff8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_shoppingmallfrag_recharge_img"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_production_default" />
+
+            <TextView
+                android:id="@+id/tv_shoppingmallfrag_recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/aBB996C"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_shoppingmallfrag_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:paddingLeft="15dip"
+            android:fadingEdge="@null"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridView
+                    android:id="@+id/gv_shoppingmallfrag_recharge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none"
+                    android:stretchMode="spacingWidthUniform"></GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <com.haotang.pet.view.MListview
+        android:id="@+id/mlv_shoppingmallfrag_jkhh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dip"
+        android:listSelector="@drawable/mlistview_selector"
+        android:scrollbars="none" />
+
+
+    <include
+        android:id="@+id/ll_shoppingmallfrag_recommend"
+        layout="@layout/ll_recommed" />
+
+</LinearLayout>

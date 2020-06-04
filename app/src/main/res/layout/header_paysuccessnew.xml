@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="43dp"
+        android:layout_height="39.5dp"
+        android:layout_marginTop="48.5dip"
+        android:layout_marginBottom="5dip"
+        android:background="@drawable/icon_paysuccess" />
+
+    <LinearLayout
+        android:id="@+id/ll_paysuccess_payprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/a333333"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_paysuccess_payprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="0"
+                android:textColor="@color/a333333"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_paysuccess_cardfacevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:textColor="@color/a666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paysuccess_discountinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_paysuccess_discountinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_mall_num"
+        android:layout_width="match_parent"
+        android:layout_height="27dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="20dip"
+        android:background="@color/aF8F1E8"
+        android:gravity="center"
+        android:textColor="@color/aBB996C"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textview_bkts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:text="点击下方查看订单进行绑卡"
+        android:textColor="@color/aBB996C"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_look_order"
+        android:layout_width="142.5dip"
+        android:layout_height="32dip"
+        android:layout_marginBottom="20dip"
+        android:background="@drawable/bg_333333_round"
+        android:gravity="center"
+        android:text="查看订单"
+        android:textColor="@color/a333333"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_dummp_money_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:gravity="center_horizontal"
+        android:text="服务完成后可获得50个罐头币"
+        android:textColor="@color/a333333"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_paysuccessnew_fx"
+        android:layout_width="match_parent"
+        android:layout_height="66dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="15dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.06"
+            android:background="@drawable/bg_round_bb996c">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dip"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:text="本次返现金额"
+                    android:textColor="@color/a666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/adf3930"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_paysuccessnew_fx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dip"
+                    android:text="0"
+                    android:textColor="@color/adf3930"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_paysuccessnew_ckfx"
+                android:layout_width="93.5dip"
+                android:layout_height="24dip"
+                android:background="@drawable/bg_df3930"
+                android:gravity="center"
+                android:text="查看返现"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/af8f8f8" />
+
+    <TextView
+        android:id="@+id/textview_show_dogs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text=" "
+        android:textColor="@color/a333333" />
+</LinearLayout>

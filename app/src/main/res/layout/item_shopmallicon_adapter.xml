@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_shopmallicon_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dip"
+        android:layout_marginRight="3dip"
+        android:background="@drawable/bg_textview_red"
+        android:gravity="center"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+    <ImageView
+        android:id="@+id/iv_item_shopmallicon"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginBottom="2dip"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_production_default" />
+
+    <TextView
+        android:id="@+id/tv_item_shopmallicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_item_shopmallicon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textColor="@color/a333333"
+        android:textSize="12sp" />
+</RelativeLayout>

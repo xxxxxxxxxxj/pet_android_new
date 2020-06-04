@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fostershopdialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@color/black"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="183dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="10dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/bg_white_round12"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fostershopdialog_lxmd"
+                android:layout_width="match_parent"
+                android:layout_height="57dip"
+                android:background="@drawable/bg_white_round12"
+                android:gravity="center"
+                android:text="联系门店"
+                android:textColor="@color/a666666"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_fostershopdialog_dhdd"
+                android:layout_width="match_parent"
+                android:layout_height="57dip"
+                android:background="@drawable/bg_white_round12"
+                android:gravity="center"
+                android:text="导航到店"
+                android:textColor="@color/a666666"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fostershopdialog_qx"
+            android:layout_width="match_parent"
+            android:layout_height="57dip"
+            android:background="@drawable/bg_white_round12"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/aff3a1e"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

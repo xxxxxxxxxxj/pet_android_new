@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToothCardUseDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_toothcard_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+        <RelativeLayout
+            android:id="@+id/rl_thoothcard_usetop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp">
+
+            <ImageView
+                android:id="@+id/iv_thoothcard_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/white_back_top" />
+
+            <TextView
+                android:id="@+id/tv_thoothcard_usetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="9.9元刷牙年卡明细"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_thoothcard_useexplain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="说明"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toothcard_usename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_thoothcard_usetop"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="27dp"
+            android:text="9.9元刷牙年卡"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_toothcard_usename"
+            android:layout_marginTop="34.5dp"
+            android:background="@drawable/bg_thoothcard_usepet">
+
+            <TextView
+                android:id="@+id/tv_thoothcard_bindpet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="已绑定宠物  "
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_thoothcard_usedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_toothcard_usename"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="10dp"
+            android:text="有效期至2020-09-01"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_balancecard_usetop"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_thoothcard_tipone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="已使用"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_toothcard_usenum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_thoothcard_tipone"
+                    android:text=""
+                    android:textColor="#ffbb996d"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_toothcard_usenum"
+                    android:text="次"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_thoothcard_tiptwo"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/tv_thoothcard_tiptwo"
+                    android:text="一共为您节省"
+                    android:textColor="#ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_thoothcard_tiptwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_thoothcard_usedmoney"
+                    android:layout_toLeftOf="@+id/tv_thoothcard_usedmoney"
+                    android:text="¥"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_thoothcard_usedmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text=""
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_toothcard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/white"
+                    android:id="@+id/rv_thoothcard_uselist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <include
+                android:id="@+id/ll_toothorder_default"
+                layout="@layout/recycler_emptyview"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

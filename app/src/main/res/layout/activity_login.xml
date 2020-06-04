@@ -1,0 +1,254 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ImageView
+        android:layout_width="71.5dip"
+        android:layout_height="31.5dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/icon_login_logo" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:orientation="vertical"
+        android:paddingLeft="15dip">
+
+        <EditText
+            android:id="@+id/et_userid_num"
+            android:layout_width="match_parent"
+            android:layout_height="43.5dip"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:hint="@string/login_phone_num_write"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:textColor="@color/a666666"
+            android:textColorHint="@color/a999999"
+            android:textCursorDrawable="@drawable/test_cursor"
+            android:textSize="14sp">
+
+            <requestFocus />
+        </EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/aEEEEEE" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_login_phoneerror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:text="请输入正确的手机号"
+        android:textColor="@color/aD0021B"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_login_imgver"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:paddingLeft="15dip"
+        android:visibility="gone">
+
+        <com.haotang.pet.view.SelectableRoundedImageView
+            android:id="@+id/sriv_login_imgver"
+            android:layout_width="90dip"
+            android:layout_height="34dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_imgyzm_lghq"
+            custom:sriv_left_bottom_corner_radius="4dip"
+            custom:sriv_left_top_corner_radius="4dip"
+            custom:sriv_right_bottom_corner_radius="4dip"
+            custom:sriv_right_top_corner_radius="4dip" />
+
+        <EditText
+            android:id="@+id/et_login_imgver"
+            android:layout_width="match_parent"
+            android:layout_height="43.5dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/sriv_login_imgver"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入数字图形验证码"
+            android:inputType="number"
+            android:textColor="@color/a666666"
+            android:textColorHint="@color/a999999"
+            android:textCursorDrawable="@drawable/test_cursor"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@id/et_login_imgver"
+            android:background="@color/aEEEEEE" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login_imgyzmerror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:text="请输入正确的图形验证码"
+        android:textColor="@color/aD0021B"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_login_yzm"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:paddingLeft="15dip">
+
+        <Button
+            android:id="@+id/bt_get"
+            android:layout_width="90dip"
+            android:layout_height="34dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_picked"
+            android:gravity="center|center_vertical"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_verifkey"
+            android:layout_width="match_parent"
+            android:layout_height="43.5dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/bt_get"
+            android:background="@null"
+            android:ems="10"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/a666666"
+            android:textColorHint="@color/a999999"
+            android:textCursorDrawable="@drawable/test_cursor"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@id/edt_verifkey"
+            android:background="@color/aEEEEEE" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login_yzmerror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:text="请输入正确的验证码"
+        android:textColor="@color/aD0021B"
+        android:textSize="12sp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/layout_login_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/img_login_notice"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/un_response_yuyin"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/textview_login_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收不到短信？请尝试语音验证码>"
+            android:textColor="@color/aD0021B"
+            android:paddingRight="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/button_login_sure"
+            android:layout_width="290dip"
+            android:layout_height="54dip"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_huise_jianbian_icon"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/login_sure"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_login_fwxy"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <LinearLayout
+            android:id="@+id/ll_login_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_login_agree"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/complaint_reason"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同意"
+                android:textColor="@color/a888888"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_oo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《宠物家用户协议》"
+            android:textColor="@color/aBB996C"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>

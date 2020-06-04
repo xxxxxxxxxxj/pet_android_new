@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_header_shoppingcart_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="91.5dip"
+            android:layout_height="81.5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/header_shoppingcart_nodata_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="15dip"
+            android:text="购物车暂无商品"
+            android:textColor="@color/a999999"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_header_shoppingcart_nodata"
+            android:layout_width="128.5dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_shopmallorder_nodata_selector"
+            android:gravity="center"
+            android:text="去首页逛逛"
+            android:layout_marginBottom="20dip"
+            android:textColor="@color/aBB996C"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <com.haotang.pet.swipelistview.SwipeListView
+        android:id="@+id/slv_header_shoppingcart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        swipe:swipeActionLeft="reveal"
+        swipe:swipeBackView="@+id/rl_item_shopcart_back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/ll_item_shopcart_front"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="290dip"
+        swipe:swipeOpenOnLongPress="false" />
+
+    <include
+        layout="@layout/ll_recommed"
+        android:id="@+id/ll_header_shoppingcart_recommend"/>
+
+</LinearLayout>
